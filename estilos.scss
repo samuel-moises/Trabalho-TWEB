@@ -14,7 +14,7 @@ $font: 'Roboto', sans-serif;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px 0;
+        padding: 5px 0;
         margin: 0px 70px;
     }
 
@@ -70,21 +70,18 @@ $font: 'Roboto', sans-serif;
 
 // NAVBAR
 .navbar {
-    border: solid blue;
     margin: 0px 70px;
+    border: solid blue;
 
 
     .menu {
-        max-width: 1300px;
+        //max-width: 1300px;
         width: 90%;
-        //margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        //gap: 35px;
-        padding: 10px 0 10px;
+        padding: 10px 0px 0px 0px;
         list-style: none;
         font-size: 16px;
-        border: solid orange;
 
         li {
             a {
@@ -101,13 +98,16 @@ $font: 'Roboto', sans-serif;
             &.active a {
                 background: $verde1;
                 padding: 8px 16px;
-                border-radius: 3px;
-                color: white;
-                font-weight: bold;
+                color: $cinza-texto;
+                &:hover {
+                    color:white;
+                }
             }
         }
     }
 }
+
+// Formulário
 
 $verde: #8bc53f;
 $cinza: #333;
@@ -115,71 +115,31 @@ $white: #fff;
 $shadow: rgba(0,0,0,0.25);
 
 .hero {
-    position: relative;
     width: 100%;
-    height: 70vh;
-    min-height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     font-family: $font;
+    border: solid red;
 
-    .hero-background img {
+    img {
+        max-width: 100%;
+        height: auto;
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        //display: block;
+        display: block;
+        position: relative;
+        border: solid blue;
     }
 
-    .hero-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 5%;
-        color: $white;
-
-        // Texto à esquerda
-        .hero-text {
-            max-width: 400px;
-
-            h2 {
-                font-size: 2.5rem;
-                line-height: 1.2;
-            }
-
-            .subtitle {
-                margin-top: 5px;
-                font-size: 1.2rem;
-            }
-
-            .since {
-                margin-top: 25px;
-                display: flex;
-                align-items: center;
-                gap: 15px;
-
-                span {
-                    font-size: 0.9rem;
-                    letter-spacing: 1px;
-                }
-
-                h3 {
-                    font-size: 2.5rem;
-                    font-weight: bold;
-                }
-            }
-        }
 
         // Caixa de pesquisa
         .search-box {
-            background: $white;
-            padding: 25px 30px;
-            width: 320px;
-            border-radius: 5px;
-            box-shadow: 0px 4px 12px $shadow;
+            position: absolute;
+            background: #f2f2f2;
+            padding: 25px;
+            max-width: 320px;
+            border: solid #87ba1d80 15px;
             color: $cinza;
 
             h4 {
@@ -233,6 +193,6 @@ $shadow: rgba(0,0,0,0.25);
             }
         }
     }
-}
+//}
 
 

@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 5px 0;
   margin: 0px 70px;
 }
 .header .logo {
@@ -55,18 +55,16 @@
 }
 
 .navbar {
-  border: solid blue;
   margin: 0px 70px;
+  border: solid blue;
 }
 .navbar .menu {
-  max-width: 1300px;
   width: 90%;
   display: flex;
   justify-content: space-between;
-  padding: 10px 0 10px;
+  padding: 10px 0px 0px 0px;
   list-style: none;
   font-size: 16px;
-  border: solid orange;
 }
 .navbar .menu li a {
   text-decoration: none;
@@ -80,99 +78,66 @@
 .navbar .menu li.active a {
   background: #87ba1d;
   padding: 8px 16px;
-  border-radius: 3px;
+  color: #333;
+}
+.navbar .menu li.active a:hover {
   color: white;
-  font-weight: bold;
 }
 
 .hero {
-  position: relative;
   width: 100%;
-  height: 70vh;
-  min-height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   font-family: "Roboto", sans-serif;
+  border: solid red;
 }
-.hero .hero-background img {
+.hero img {
+  max-width: 100%;
+  height: auto;
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  display: block;
+  position: relative;
+  border: solid blue;
 }
-.hero .hero-content {
+.hero .search-box {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 5%;
-  color: #fff;
-}
-.hero .hero-content .hero-text {
-  max-width: 400px;
-}
-.hero .hero-content .hero-text h2 {
-  font-size: 2.5rem;
-  line-height: 1.2;
-}
-.hero .hero-content .hero-text .subtitle {
-  margin-top: 5px;
-  font-size: 1.2rem;
-}
-.hero .hero-content .hero-text .since {
-  margin-top: 25px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.hero .hero-content .hero-text .since span {
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-}
-.hero .hero-content .hero-text .since h3 {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-.hero .hero-content .search-box {
-  background: #fff;
-  padding: 25px 30px;
-  width: 320px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  background: #f2f2f2;
+  padding: 25px;
+  max-width: 320px;
+  border: solid rgba(135, 186, 29, 0.5019607843) 15px;
   color: #333;
 }
-.hero .hero-content .search-box h4 {
+.hero .search-box h4 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
 }
-.hero .hero-content .search-box form {
+.hero .search-box form {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
 }
-.hero .hero-content .search-box form .form-row {
+.hero .search-box form .form-row {
   width: 48%;
   display: flex;
   flex-direction: column;
 }
-.hero .hero-content .search-box form .form-row label {
+.hero .search-box form .form-row label {
   font-size: 0.75rem;
   margin-bottom: 3px;
 }
-.hero .hero-content .search-box form .form-row input,
-.hero .hero-content .search-box form .form-row select {
+.hero .search-box form .form-row input,
+.hero .search-box form .form-row select {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.hero .hero-content .search-box form .form-row.full {
+.hero .search-box form .form-row.full {
   width: 100%;
 }
-.hero .hero-content .search-box form .btn-search {
+.hero .search-box form .btn-search {
   width: 100%;
   padding: 10px;
   background: #8bc53f;
@@ -183,6 +148,6 @@
   cursor: pointer;
   margin-top: 10px;
 }
-.hero .hero-content .search-box form .btn-search:hover {
+.hero .search-box form .btn-search:hover {
   background: rgb(102.976744186, 141.8790697674, 22.1209302326);
 }/*# sourceMappingURL=estilos.css.map */

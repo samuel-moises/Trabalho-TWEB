@@ -52,10 +52,13 @@
                 <h4>PESQUISAR</h4>
 
                 <form>
-                    <div class="form-row">
-                        <label>Levantamento</label>
-                        <select>
-                            <option>Localização</option>
+
+                    <div class="form-row"> <!--Cria uma linha do formulário para agrupar o campo de seleção.-->
+                        <label for="levantamento"></label><!--Campo-->
+                        <select required="required" class="levantamento"><!--Campo obrigatório antes de enviar fprmulário-->
+                            <option value="" disabled selected hidden>Levantamento</option> <!--Funciona como Place Holder-->
+                            <option value="HOR">Faial-Airoport</option>
+                            <option value="CHO">Faial-Gare-Pier</option>
                         </select>
                     </div>
 
@@ -68,11 +71,13 @@
 
                     <div class="form-row">
                         <label>Data Levantamento</label>
+                        <input type="date">
                         <input type="time">
                     </div>
 
                     <div class="form-row">
                         <label>Data Devolução</label>
+                        <input type="date">
                         <input type="time">
                     </div>
 

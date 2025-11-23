@@ -1,0 +1,190 @@
+.header {
+  background: white;
+  width: 100%;
+}
+.header .container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border: solid red;
+  margin: 0px 70px;
+}
+.header .logo {
+  height: 70px;
+}
+.header .header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.header .header-actions .login-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: solid red;
+}
+.header .header-actions .login-area .icone {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+.header .header-actions .login-area .entrar {
+  color: #212529;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+  padding: 0px 10px 0px 0px;
+}
+.header .header-actions .login-area .entrar span:nth-child(2) {
+  font-weight: bold;
+  color: #87ba1d;
+}
+.header .header-actions .language-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #87ba1d;
+  font-size: 16px;
+  border: solid red;
+  color: #222;
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+.navbar {
+  border: solid blue;
+  margin: 0px 70px;
+}
+.navbar .menu {
+  max-width: 1300px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 10px;
+  list-style: none;
+  font-size: 16px;
+  border: solid orange;
+}
+.navbar .menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+.navbar .menu li a:hover {
+  color: #87ba1d;
+}
+.navbar .menu li.active a {
+  background: #87ba1d;
+  padding: 8px 16px;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 550px;
+  overflow: hidden;
+}
+.hero .hero-background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.hero .hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  color: #fff;
+}
+.hero .hero-content .hero-text {
+  max-width: 400px;
+}
+.hero .hero-content .hero-text h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+.hero .hero-content .hero-text .subtitle {
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+.hero .hero-content .hero-text .since {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.hero .hero-content .hero-text .since span {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+.hero .hero-content .hero-text .since h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.hero .hero-content .search-box {
+  background: #fff;
+  padding: 25px 30px;
+  width: 320px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  color: #333;
+}
+.hero .hero-content .search-box h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+.hero .hero-content .search-box form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.hero .hero-content .search-box form .form-row {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+.hero .hero-content .search-box form .form-row label {
+  font-size: 0.75rem;
+  margin-bottom: 3px;
+}
+.hero .hero-content .search-box form .form-row input,
+.hero .hero-content .search-box form .form-row select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.hero .hero-content .search-box form .form-row.full {
+  width: 100%;
+}
+.hero .hero-content .search-box form .btn-search {
+  width: 100%;
+  padding: 10px;
+  background: #8bc53f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.hero .hero-content .search-box form .btn-search:hover {
+  background: rgb(102.976744186, 141.8790697674, 22.1209302326);
+}/*# sourceMappingURL=estilos.css.map */

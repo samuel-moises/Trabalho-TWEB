@@ -1,0 +1,237 @@
+$verde1: #87ba1d;     // tom do "INÍCIO" ativo e do logo
+$cinza-texto: #333;
+$cinza-escuro: #222;
+
+.header {
+    background: white;
+    width: 100%;
+
+    .container {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        border: solid red;
+        margin: 0px 70px;
+    }
+
+    .logo {
+        height: 70px; // ajusta ao tamanho do logótipo real
+    }
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        .login-area {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: solid red;
+
+            .icone {
+                display: flex; 
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                //border: solid red;
+            }
+
+            .entrar {
+                color: #212529;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 13px;
+                padding: 0px 10px 0px 0px;
+                span:nth-child(2) {
+                    font-weight: bold;
+                    color: $verde1;
+                }
+            }
+        }
+
+        .language-selector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $verde1;
+            font-size: 16px;
+            border: solid red;
+            color: $cinza-escuro;
+            font-size: 14px;
+            padding-right: 10px;
+        }
+    }
+}
+
+// NAVBAR
+.navbar {
+    border: solid blue;
+    margin: 0px 70px;
+
+
+    .menu {
+        max-width: 1300px;
+        width: 90%;
+        //margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        //gap: 35px;
+        padding: 10px 0 10px;
+        list-style: none;
+        font-size: 16px;
+        border: solid orange;
+
+        li {
+            a {
+                text-decoration: none;
+                color: $cinza-texto;
+                font-size: 15px;
+                letter-spacing: 0.5px;
+
+                &:hover {
+                    color: $verde1;
+                }
+            }
+
+            &.active a {
+                background: $verde1;
+                padding: 8px 16px;
+                border-radius: 3px;
+                color: white;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+$verde: #8bc53f;
+$cinza: #333;
+$white: #fff;
+$shadow: rgba(0,0,0,0.25);
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 550px;
+    overflow: hidden;
+
+    .hero-background img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .hero-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
+        color: $white;
+
+        // Texto à esquerda
+        .hero-text {
+            max-width: 400px;
+
+            h2 {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+
+            .subtitle {
+                margin-top: 5px;
+                font-size: 1.2rem;
+            }
+
+            .since {
+                margin-top: 25px;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                span {
+                    font-size: 0.9rem;
+                    letter-spacing: 1px;
+                }
+
+                h3 {
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        // Caixa de pesquisa
+        .search-box {
+            background: $white;
+            padding: 25px 30px;
+            width: 320px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 12px $shadow;
+            color: $cinza;
+
+            h4 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: $cinza;
+            }
+
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+
+                .form-row {
+                    width: 48%;
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        font-size: 0.75rem;
+                        margin-bottom: 3px;
+                    }
+
+                    input,
+                    select {
+                        padding: 8px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                    }
+
+                    &.full {
+                        width: 100%;
+                    }
+                }
+
+                .btn-search {
+                    width: 100%;
+                    padding: 10px;
+                    background: $verde;
+                    color: $white;
+                    border: none;
+                    border-radius: 4px;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    margin-top: 10px;
+
+                    &:hover {
+                        background: darken($verde1, 10%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+

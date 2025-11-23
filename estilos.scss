@@ -1,10 +1,13 @@
 $verde1: #87ba1d;     // tom do "INÍCIO" ativo e do logo
 $cinza-texto: #333;
 $cinza-escuro: #222;
+$font: 'Roboto', sans-serif;
+
 
 .header {
     background: white;
     width: 100%;
+    font-family: $font;
 
     .container {
         max-width: 100%;
@@ -117,12 +120,13 @@ $shadow: rgba(0,0,0,0.25);
     height: 70vh;
     min-height: 550px;
     overflow: hidden;
+    font-family: $font;
 
     .hero-background img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        display: block;
+        //display: block;
     }
 
     .hero-content {

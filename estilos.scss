@@ -12,7 +12,6 @@ $cinza-escuro: #222;
         justify-content: space-between;
         align-items: center;
         padding: 15px 0;
-        border: solid red;
         margin: 0px 70px;
     }
 
@@ -30,7 +29,6 @@ $cinza-escuro: #222;
             display: flex;
             align-items: center;
             gap: 8px;
-            border: solid red;
 
             .icone {
                 display: flex; 
@@ -60,7 +58,6 @@ $cinza-escuro: #222;
             justify-content: center;
             color: $verde1;
             font-size: 16px;
-            border: solid red;
             color: $cinza-escuro;
             font-size: 14px;
             padding-right: 10px;

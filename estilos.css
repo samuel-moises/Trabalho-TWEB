@@ -8,7 +8,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
-  border: solid red;
   margin: 0px 70px;
 }
 .header .logo {
@@ -24,7 +23,6 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  border: solid red;
 }
 .header .header-actions .login-area .icone {
   display: flex;
@@ -50,7 +48,6 @@
   justify-content: center;
   color: #87ba1d;
   font-size: 16px;
-  border: solid red;
   color: #222;
   font-size: 14px;
   padding-right: 10px;

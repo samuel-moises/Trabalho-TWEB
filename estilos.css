@@ -88,72 +88,105 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   overflow: hidden;
   font-family: "Roboto", sans-serif;
-  border: solid red;
+  border-bottom: solid 15px #f2f2f2;
+  position: relative;
+  z-index: 1;
 }
 .hero img {
   max-width: 100%;
   height: auto;
-  width: 100%;
-  display: block;
-  position: relative;
-  border: solid blue;
+  width: auto;
 }
 .hero .search-box {
-  position: absolute;
-  background: #f2f2f2;
-  padding: 25px;
-  max-width: 500px;
-  border: solid rgba(135, 186, 29, 0.5019607843) 15px;
-  color: #333;
-}
-.hero .search-box h4 {
-  border: solid red;
-  text-align: center;
-  -webkit-text-decoration: bold;
-          text-decoration: bold;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-.hero .search-box form {
-  border: solid red;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-.hero .search-box form .form-row {
-  border: solid blue;
-  width: 50%;
   display: flex;
   flex-direction: column;
+  background: #f2f2f2;
+  color: #333;
+  border-top: solid rgba(135, 186, 29, 0.5019607843) 15px;
+  border-left: solid rgba(135, 186, 29, 0.5019607843) 15px;
+  border-right: solid rgba(135, 186, 29, 0.5019607843) 15px;
+  padding: 10px 20px 0px 20px;
+  margin: 0;
+  position: absolute;
+  z-index: 2;
 }
-.hero .search-box form .form-row label {
-  font-size: 0.75rem;
-  margin-bottom: 3px;
+.hero .search-box .form-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 2px;
+  height: 40px;
+  width: 100%;
+  border: solid 1px blue;
 }
-.hero .search-box form .form-row input,
-.hero .search-box form .form-row select {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.hero .search-box .form-row h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-.hero .search-box form .form-row.full {
+.hero .search-box .form-row span {
+  font-size: 1rem;
+  text-align: left;
+}
+.hero .search-box .form-row input, .hero .search-box .form-row select {
+  border: solid 1px purple;
+  border-radius: 5px;
+  padding: 10px;
   width: 100%;
 }
-.hero .search-box form .btn-search {
-  width: 100%;
+.hero .search-box .btn-search {
+  width: 50%;
   padding: 10px;
   background: #8bc53f;
   color: #fff;
   border: none;
-  border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 10px;
 }
-.hero .search-box form .btn-search:hover {
+.hero .search-box .btn-search:hover {
   background: rgb(102.976744186, 141.8790697674, 22.1209302326);
+}
+
+#frota {
+  margin: 0px 109px 0px 109px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px red;
+}
+#frota .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: solid 2px orange;
+}
+#frota .container h2 {
+  padding: 10px 10px;
+  font-family: "Roboto", sans-serif;
+  color: #8bc53f;
+  font-size: 32px;
+}
+#frota .container .slideshow {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: blue;
+  height: 200px;
+  border: solid 2px red;
+}
+#frota .container .slideshow .carro1,
+#frota .container .slideshow .carro2,
+#frota .container .slideshow .carro3,
+#frota .container .slideshow .carro4 {
+  border: solid 2px green;
+  height: 100%;
+  width: 100%;
 }/*# sourceMappingURL=estilos.css.map */

@@ -128,8 +128,10 @@
   font-weight: bold;
 }
 .hero .search-box .form-row span {
+  display: block;
   font-size: 1rem;
   text-align: left;
+  border: 2px solid red;
 }
 .hero .search-box .form-row input, .hero .search-box .form-row select {
   border: solid 1px purple;

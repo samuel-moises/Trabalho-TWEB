@@ -166,8 +166,10 @@ $white: #fff;
                          }
 
                         span {
+                            display: block ;
                             font-size: 1rem;
                             text-align: left;
+                            border: 2px solid red;
                         }
 
                          input, select {

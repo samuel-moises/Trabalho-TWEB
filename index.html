@@ -55,7 +55,7 @@
 
                     <div class="form-row"> <!--Cria uma linha do formulário para agrupar o campo de seleção.-->
                         <label for="levantamento"></label><!--Campo-->
-                        <select required="required" class="levantamento"><!--Campo obrigatório antes de enviar fprmulário-->
+                        <select class="levantamento" required><!--Campo obrigatório antes de enviar fprmulário-->
                             <option value="" disabled selected hidden>Levantamento</option> <!--Funciona como Place Holder-->
                             <option value="HOR">Faial-Airoport</option>
                             <option value="CHO">Faial-Gare-Pier</option>
@@ -64,7 +64,7 @@
 
                     <div class="form-row">
                         <label for="devolução"></label>
-                        <select required="required" class="devolução">
+                        <select class="devolução" required>
                             <option value="" disabled selected hidden>Devolução</option>
                             <option value="HOR">Faial-Airoport</option>
                             <option value="CHO">Faial-Gare-Pier</option>
@@ -73,14 +73,14 @@
 
                     <div class="form-row">
                         <label>Data Levantamento</label>
-                        <input type="date">
-                        <input type="time">
+                        <input type="date" required>
+                        <input type="time" value="10:00" required>
                     </div>
 
                     <div class="form-row">
                         <label>Data Devolução</label>
-                        <input type="date">
-                        <input type="time">
+                        <input type="date" required>
+                        <input type="time" value="10:00" required>
                     </div>
 
                     <div class="form-row full">

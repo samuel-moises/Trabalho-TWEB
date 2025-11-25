@@ -105,21 +105,27 @@
   position: absolute;
   background: #f2f2f2;
   padding: 25px;
-  max-width: 320px;
+  max-width: 500px;
   border: solid rgba(135, 186, 29, 0.5019607843) 15px;
   color: #333;
 }
 .hero .search-box h4 {
+  border: solid red;
   text-align: center;
+  -webkit-text-decoration: bold;
+          text-decoration: bold;
+  font-size: 2rem;
   margin-bottom: 20px;
   color: #333;
 }
 .hero .search-box form {
+  border: solid red;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
 }
 .hero .search-box form .form-row {
+  border: solid blue;
   width: 50%;
   display: flex;
   flex-direction: column;

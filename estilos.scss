@@ -138,22 +138,27 @@ $shadow: rgba(0,0,0,0.25);
             position: absolute;
             background: #f2f2f2;
             padding: 25px;
-            max-width: 320px;
+            max-width: 500px;
             border: solid #87ba1d80 15px;
             color: $cinza;
 
             h4 {
+                border: solid red;
                 text-align: center;
+                text-decoration: bold;
+                font-size: 2rem;
                 margin-bottom: 20px;
                 color: $cinza;
             }
 
             form {
+                border: solid red;
                 display: flex;
                 flex-wrap: wrap;
                 gap: 15px;
 
                 .form-row {
+                    border: solid blue;
                     width: 50%;
                     display: flex;
                     flex-direction: column;

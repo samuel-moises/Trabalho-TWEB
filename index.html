@@ -48,51 +48,62 @@
         <img src="img/banner.jpg" alt="Lagoa e estrada nos Açores">
 
             <!-- Caixa de pesquisa -->
-            <div class="search-box">
-                <h4>PESQUISAR</h4>
-
-                <form>
-
-                    <div class="form-row"> <!--Cria uma linha do formulário para agrupar o campo de seleção.-->
-                        <label for="levantamento"></label><!--Campo-->
-                        <select class="levantamento" required><!--Campo obrigatório antes de enviar fprmulário-->
+            <form class="search-box">
+                
+                <div class="form-row"><h1>PESQUISAR</h1></div>
+  
+                <div class="form-row"> <!--Cria uma linha do formulário para agrupar o campo de seleção.-->
+                        <select id="levantamento" required><!--Campo obrigatório antes de enviar fprmulário-->
                             <option value="" disabled selected hidden>Levantamento</option> <!--Funciona como Place Holder-->
                             <option value="HOR">Faial-Airoport</option>
                             <option value="CHO">Faial-Gare-Pier</option>
                         </select>
-                    </div>
 
-                    <div class="form-row">
-                        <label for="devolução"></label>
-                        <select class="devolução" required>
+                        <select id="devolução" required>
                             <option value="" disabled selected hidden>Devolução</option>
-                            <option value="HOR">Faial-Airoport</option>
-                            <option value="CHO">Faial-Gare-Pier</option>
+                             <option value="HOR">Faial-Airoport</option>
+                             <option value="CHO">Faial-Gare-Pier</option>
                         </select>
-                    </div>
+                </div>
+               
+                
 
-                    <div class="form-row">
-                        <label>Data Levantamento</label>
-                        <input type="date" required>
-                        <input type="time" value="10:00" required>
-                    </div>
-
-                    <div class="form-row">
-                        <label>Data Devolução</label>
-                        <input type="date" required>
-                        <input type="time" value="10:00" required>
-                    </div>
-
-                    <div class="form-row full">
-                        <label>Data de nascimento do condutor:</label>
-                        <input type="date" placeholder="AAAA-MM-DD">
-                    </div>
-
+                <div class="form-row">
+                    <input type="date" id="data-levantamento" placeholder="Data de levantamento" required> 
+                    <input type="time" value="10:00" required>
+                </div>
+                
+                <div class="form-row">
+                    <input type="date" id="data-devolucao" placeholder="Data de Devolução" required> 
+                    <input type="time" value="10:00" required>
+                </div>
+                
+                <div class="form-row">
+                    <span>Data de nascimento do condutor</span>
+                    <input type="date" placeholder="AAAA-MM-DD">
+                </div>
+                
+                <div class="form-row">
                     <button type="submit" class="btn-search">Pesquisar 🔍</button>
-                </form>
-            </div>
-        <!--</div>-->
+                </div>
+            </form>
     </section>
+
+<!-- Frota -->
+
+<div id="frota">
+    <div class="container">
+        <h2>Nossa Frota</h2>
+        <div class="slideshow">
+            <div class="carro1">carro 1</div>
+            <div class="carro2">carro 2</div>
+            <div class="carro3">carro 3</div>
+            <div class="carro4">carro 4</div>
+        </div>
+    </div>
+</div>
+
+
 
 
 </body>

@@ -152,9 +152,9 @@ $white: #fff;
 
                 .form-row {
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 25px;
+                    justify-content: center; //Eixo horizontal X
+                    align-items: center; //Eixo vertical Y
+                    //gap: 25px;
                     margin: 2px;
                     height: 40px;
                     width: 100%;
@@ -165,20 +165,34 @@ $white: #fff;
                              font-weight: bold;
                          }
 
-                        span {
-                            display: block ;
-                            font-size: 1rem;
-                            text-align: left;
-                            border: 2px solid red;
+                        .form-row-container-left {
+                            display: flex;
+                            width: 100%;
+                            padding: 5px 15px 5px 0px;//encosta á esquerda
+                            border: solid 2px orange;
                         }
 
-                         input, select {
-                            border: solid 1px purple;
-                            border-radius: 5px;
-                            padding: 10px;
+                        .form-row-container-right {
+                            display: flex;
                             width: 100%;
-                       
-                         }
+                            padding: 5px 0px 5px 15px;//encosta á direita
+                            border: solid 2px greenyellow;
+
+                        }
+
+                        input, select {
+                           border: solid 1px purple;
+                           border-radius: 5px;
+                           padding: 8px;//espaçamento interno seletores
+                           width: 100%;
+                        }
+
+                        span {
+                           display: block ;
+                           font-size: 1rem;
+                           text-align: left;
+                        }
+
                 }
 
                 .btn-search {

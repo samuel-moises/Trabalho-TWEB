@@ -53,34 +53,50 @@
                 <div class="form-row"><h1>PESQUISAR</h1></div>
   
                 <div class="form-row"> <!--Cria uma linha do formulário para agrupar o campo de seleção.-->
+                    <div class="form-row-container-left">    
                         <select id="levantamento" required><!--Campo obrigatório antes de enviar fprmulário-->
                             <option value="" disabled selected hidden>Levantamento</option> <!--Funciona como Place Holder-->
                             <option value="HOR">Faial-Airoport</option>
                             <option value="CHO">Faial-Gare-Pier</option>
                         </select>
-
+                    </div>
+                    <div class="form-row-container-right"> 
                         <select id="devolução" required>
                             <option value="" disabled selected hidden>Devolução</option>
                              <option value="HOR">Faial-Airoport</option>
                              <option value="CHO">Faial-Gare-Pier</option>
                         </select>
+                    </div>
                 </div>
                
                 
 
                 <div class="form-row">
-                    <input type="date" id="data-levantamento" placeholder="Data de levantamento" required> 
-                    <input type="time" value="10:00" required>
+                    <div class="form-row-container-left">
+                        <input type="date" id="data-levantamento" placeholder="Data de levantamento" required> 
+                    </div>
+                    <div class="form-row-container-right">
+                        <input type="time" value="10:00" required>
+                    </div>
                 </div>
                 
                 <div class="form-row">
-                    <input type="date" id="data-devolucao" placeholder="Data de Devolução" required> 
-                    <input type="time" value="10:00" required>
+                    <div class="form-row-container-left">
+                        <input type="date" id="data-devolucao" placeholder="Data de Devolução" required> 
+                    </div>
+                    <div class="form-row-container-right">
+                        <input type="time" value="10:00" required>
+                    </div>
                 </div>
                 
                 <div class="form-row">
-                    <span>Data de nascimento do condutor</span>
-                    <input type="date" placeholder="AAAA-MM-DD">
+                    <div class="form-row-container-left">
+                        <span>Data de nascimento do condutor</span>
+                    </div>
+
+                    <div class="form-row-container-right">
+                        <input type="date" placeholder="AAAA-MM-DD">
+                    </div>
                 </div>
                 
                 <div class="form-row">

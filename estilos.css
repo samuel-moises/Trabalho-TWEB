@@ -65,7 +65,6 @@
   justify-content: space-between;
   padding: 10px 0px 0px 0px;
   list-style: none;
-  font-size: 16px;
 }
 .navbar .menu li a {
   text-decoration: none;
@@ -205,24 +204,95 @@
 }
 
 .noticias {
+  background-color: #f2f2f2;
+  font-family: "Roboto", sans-serif;
+  border: solid 2px red;
+}
+.noticias .tabela {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto 1fr;
+  margin: 2vw;
+  grid-column-gap: 1.5vw;
+  border: solid 2px red;
+}
+.noticias .tabela .linha1 {
+  grid-column: 1/4;
   text-align: center;
+  padding: 1rem;
+  color: #87ba1d;
+  font-size: 2.1rem;
+}
+.noticias .tabela .linha2 {
+  text-align: center;
+  background-color: white;
+  height: 100%;
+  padding: 1.5rem;
+  font-size: 1.4rem;
+}
+.noticias .tabela img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*
+Usa rem ou em para espaçamentos verticais (top/bottom), pois mantêm a consistência com o tamanho do texto.
+Usa % ou vw/vh para espaçamentos horizontais (left/right), pois adaptam-se ao tamanho do ecrã.
+Evita usar apenas px em layouts responsivos, pois não se ajusta a diferentes resoluções.
+*/
+.footer {
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  margin: 0 15vh;
+  border: solid 2px black;
+}
+.footer .footer-top {
   border: solid 2px red;
-  margin: 50px;
+  display: flex;
+  align-items: center;
 }
-.noticias .linha1 {
-  grid-column: 1/span 3; /* Ocupa as 3 colunas */
-  border: solid 2px red;
-}
-.noticias .linha2 {
-  border: solid 2px green;
-  grid-column: 3/span 1; /* Ocupa a 3ª coluna */
-}
-.noticias .linha3 {
-  border: solid 2px blue;
-  grid-column: 3/span 1; /* Ocupa a 3ª coluna */
-}
-.noticias .linha3 img {
-  width: 400px;
+.footer .footer-top .logo {
+  width: 12rem;
   height: auto;
+  border: solid 2px black;
+  padding-right: 2vw;
+}
+.footer .footer-top .footer-menu1 {
+  display: flex;
+  align-items: center;
+  padding: 0 0 1.5rem 0;
+  border-bottom: solid 3px #f2f2f2;
+}
+.footer .footer-top .footer-menu1 li {
+  list-style-type: none;
+  border: solid 1px red;
+}
+.footer .footer-top .footer-menu1 li a {
+  text-decoration: none;
+  color: #87ba1d;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+.footer .footer-top .footer-menu1 li a:hover {
+  color: #f2f2f2;
+}
+.footer .footer-bottom {
+  display: flex;
+}
+.footer .footer-bottom .footer-menu2 {
+  display: flex;
+  align-items: center;
+}
+.footer .footer-bottom .footer-menu2 li {
+  list-style-type: none;
+  border: solid 1px red;
+  padding: 10px;
+}
+.footer .footer-bottom .footer-menu2 li a {
+  text-decoration: none;
+  color: #999999;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
 }/*# sourceMappingURL=estilos.css.map */

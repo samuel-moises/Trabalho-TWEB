@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header {
   background: white;
   width: 100%;
@@ -201,4 +202,27 @@
   border: solid 2px green;
   height: 100%;
   width: 100%;
+}
+
+.noticias {
+  display: grid;
+  text-align: center;
+  border: solid 2px red;
+  margin: 50px;
+}
+.noticias .linha1 {
+  grid-column: 1/span 3; /* Ocupa as 3 colunas */
+  border: solid 2px red;
+}
+.noticias .linha2 {
+  border: solid 2px green;
+  grid-column: 3/span 1; /* Ocupa a 3ª coluna */
+}
+.noticias .linha3 {
+  border: solid 2px blue;
+  grid-column: 3/span 1; /* Ocupa a 3ª coluna */
+}
+.noticias .linha3 img {
+  width: 400px;
+  height: auto;
 }/*# sourceMappingURL=estilos.css.map */

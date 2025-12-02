@@ -26,6 +26,7 @@
                     <span>&#x1F1F5;&#x1F1F9; PORTUGAL &#9660; </span>
                 </div>
             </div>
+            <div class="lang-pequeno">&#x1F1F5;&#x1F1F9;&#9660;</div>
         </div>
 
         <nav class="navbar">
@@ -38,6 +39,7 @@
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">CONDIÇÕES GERAIS</a></li>
                 <li><a href="#">CONTACTOS</a></li>
+                <li class="entrar"><a href="#">ENTRAR</a></li>
             </ul>
         </nav>
     </header>
@@ -49,59 +51,26 @@
 
             <!-- Caixa de pesquisa -->
             <form class="search-box">
-                
-                <div class="form-row"><h1>PESQUISAR</h1></div>
-  
-                <div class="form-row"> <!--Cria uma linha do formulário para agrupar o campo de seleção.-->
-                    <div class="form-row-container-left">    
-                        <select id="levantamento" required><!--Campo obrigatório antes de enviar fprmulário-->
-                            <option value="" disabled selected hidden>Levantamento</option> <!--Funciona como Place Holder-->
-                            <option value="HOR">Faial-Airoport</option>
-                            <option value="CHO">Faial-Gare-Pier</option>
-                        </select>
-                    </div>
-                    <div class="form-row-container-right"> 
-                        <select id="devolução" required>
-                            <option value="" disabled selected hidden>Devolução</option>
-                             <option value="HOR">Faial-Airoport</option>
-                             <option value="CHO">Faial-Gare-Pier</option>
-                        </select>
-                    </div>
-                </div>
-               
-                
+                <div class="linha1"><p>PESQUISAR</p></div>  
+                <select id="levantamento" required>
+                    <option value="" disabled selected hidden>Levantamento</option>
+                    <option value="HOR">Faial-Airoport</option>
+                    <option value="CHO">Faial-Gare-Pier</option>
+                </select>
 
-                <div class="form-row">
-                    <div class="form-row-container-left">
-                        <input type="date" id="data-levantamento" placeholder="Data de levantamento" required> 
-                    </div>
-                    <div class="form-row-container-right">
-                        <input type="time" value="10:00" required>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-row-container-left">
-                        <input type="date" id="data-devolucao" placeholder="Data de Devolução" required> 
-                    </div>
-                    <div class="form-row-container-right">
-                        <input type="time" value="10:00" required>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-row-container-left">
-                        <span>Data de nascimento do condutor</span>
-                    </div>
+                <select id="devolução" required>
+                    <option value="" disabled selected hidden>Devolução</option>
+                    <option value="HOR">Faial-Airoport</option>
+                    <option value="CHO">Faial-Gare-Pier</option>
+                </select>
 
-                    <div class="form-row-container-right">
-                        <input type="date" placeholder="AAAA-MM-DD">
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <button type="submit" class="btn-search">Pesquisar 🔍</button>
-                </div>
+                <input type="date" id="data-levantamento" required>
+                <input type="time" id="hora-levantamento" value="10:00" required>
+                <input type="date" id="data-devolucao" required> 
+                <input type="time" id="hora-devolução" value="10:00" required>
+                <span>Data de nascimento do condutor:</span>
+                <input type="date" id="data-nascimento" placeholder="AAAA-MM-DD">
+                <button type="submit" id="btn-search">Pesquisar 🔍</button>
             </form>
     </section>
 
@@ -167,9 +136,9 @@
 <section class="noticias">
     <div class="tabela"> <!--grid-->
         <div class="linha1">NOTÍCIAS</div>
-        <div class="linha2">Comerciais e Elétricos</div>
-        <div class="linha2">Carro de luxo e Serviço de Motorista</div>
-        <div class="linha2">50 Anos</div>
+        <div class="linha2-1">Comerciais e Elétricos</div>
+        <div class="linha2-2">Carro de luxo e Serviço de Motorista</div>
+        <div class="linha2-3">50 Anos</div>
         <div class="img1">
             <img src="img/comerciais_eletricos.jpg" alt="Veículos comerciais e elétricos" id="item-1">
         </div>
@@ -191,7 +160,7 @@
         <ul class="footer-menu1">
             <li><a href="#">Politica de Gestão</a></li>
             <li><a href="#">Livro de Reclamações</a></li>
-            <li><a href="#">PArceiros</a></li>
+            <li><a href="#">Parceiros</a></li>
             <li><a href="#">Politica de Privacidade</a></li>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Cookies Settings</a></li>
@@ -206,8 +175,7 @@
             <li><a href="#">NOTÍCIAS</a></li>
             <li><a href="#">EXTRAS E COBERTURAS ADICIONAIS</a></li>
             <li><a href="#">CONDIÇÕES GERAIS</a></li>
-            <li><a href="#">CHECK-IN</a></li>
-            <li><a href="#">ONLINE</li>
+            <li><a href="#">CHECK-IN ONLINE</a></li>
             <li><a href="#">CONTACTOS</a></li>
             <li><a href="#">ENTRAR</a></li>
         </ul>
@@ -216,7 +184,9 @@
 </footer>
 
 <div class="social">
-
+    <div><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 512 512"><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></div>
+    <div><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/> <path d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5l6-3.5-6-3.5v7z"/></svg></div>
+    <div><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/> <path fill-rule="nonzero" d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0 1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058-.784.037-1.31.142-1.798.332-.434.168-.747.369-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029.037.783.142 1.31.331 1.797.17.435.37.748.702 1.08.337.336.65.537 1.08.703.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058.782-.037 1.309-.142 1.797-.331.433-.169.748-.37 1.08-.702.337-.337.538-.65.704-1.08.19-.493.296-1.02.332-1.8.052-1.104.058-1.49.058-4.029 0-2.474-.007-2.878-.058-4.029-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08 2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z"/></svg></div>
 </div>
 
 

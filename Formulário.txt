@@ -1,0 +1,172 @@
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    overflow: hidden;
+    font-family: $font;
+    border-bottom: solid 15px $cinza-claro;
+    position: relative;
+    z-index: 1;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        //display: block;
+    }
+
+
+        // Caixa de pesquisa
+        .search-box {
+            display:flex;
+            flex-direction: column;
+            background: #f2f2f2;
+            color: $cinza-texto;
+            border-top: solid #87ba1d80 15px;
+            border-left: solid #87ba1d80 15px;
+            border-right: solid #87ba1d80 15px;
+            padding: 10px 20px 0px 20px;
+            width: 550px; //largura fixa para o form OK
+            margin: 0;  
+            position: absolute;
+            z-index: 2;
+
+
+
+                .form-row {
+                    display: flex;
+                    justify-content: center; //Eixo horizontal X
+                    align-items: center; //Eixo vertical Y
+                    margin: 2px;
+                    height: 45px;
+                    width: 100%;
+                    border: solid 1px blue;
+
+                        h1 {
+                             font-size: 1.5rem;
+                             font-weight: bold;
+                         }
+
+                        .form-row-container-left {
+                            display: flex;
+                            width: 100%;
+                            padding: 5px 15px 5px 0px;//Encosta á esquerda
+                            border: solid 2px orange;
+                            justify-content: flex-end;
+                        }
+
+
+                        .form-row-container-right {
+                            display: flex;
+                            width: 100%;
+                            padding: 5px 0px 5px 15px;//Encosta á direita
+                            //border: solid 2px greenyellow;
+
+                        }
+
+                        input, select {
+                           border-radius: 5px;
+                           border: solid 1px $cinza-escuro;
+                           padding: 8px;//espaçamento interno seletores
+                           width: 100%;
+                           color: $cinza-texto;
+                        }
+
+                        span {
+                           display: block ;
+                           font-size: 1rem;
+                           text-align: left;
+                        }
+
+                }
+
+                .btn-search {
+                    width: 50%;
+                    padding: 10px;
+                    background: $verde;
+                    color: $white;
+                    border: none;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    
+                    &:hover {
+                        background: darken($verde1, 10%);
+                    }
+                }
+            }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Formulário -->
+
+    <section class="hero">
+        <img src="img/banner.jpg" alt="Lagoa e estrada nos Açores">
+
+            <!-- Caixa de pesquisa -->
+            <form class="search-box">
+                
+                <div class="form-row"><h1>PESQUISAR</h1></div>
+  
+                <div class="form-row"> <!--Cria uma linha do formulário para agrupar o campo de seleção.-->
+                    <div class="form-row-container-left">    
+                        <select id="levantamento" required><!--Campo obrigatório antes de enviar fprmulário-->
+                            <option value="" disabled selected hidden>Levantamento</option> <!--Funciona como Place Holder-->
+                            <option value="HOR">Faial-Airoport</option>
+                            <option value="CHO">Faial-Gare-Pier</option>
+                        </select>
+                    </div>
+                    <div class="form-row-container-right"> 
+                        <select id="devolução" required>
+                            <option value="" disabled selected hidden>Devolução</option>
+                             <option value="HOR">Faial-Airoport</option>
+                             <option value="CHO">Faial-Gare-Pier</option>
+                        </select>
+                    </div>
+                </div>
+               
+                
+
+                <div class="form-row">
+                    <div class="form-row-container-left">
+                        <input type="date" id="data-levantamento" placeholder="Data de levantamento" required> 
+                    </div>
+                    <div class="form-row-container-right">
+                        <input type="time" value="10:00" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-row-container-left">
+                        <input type="date" id="data-devolucao" placeholder="Data de Devolução" required> 
+                    </div>
+                    <div class="form-row-container-right">
+                        <input type="time" value="10:00" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-row-container-left">
+                        <span>Data de nascimento do condutor:</span>
+                    </div>
+
+                    <div class="form-row-container-right">
+                        <input type="date" placeholder="AAAA-MM-DD">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <button type="submit" class="btn-search">Pesquisar 🔍</button>
+                </div>
+            </form>
+    </section>

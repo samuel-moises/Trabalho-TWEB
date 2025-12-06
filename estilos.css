@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header {
   background: white;
   width: 100%;
@@ -162,43 +163,181 @@
   background: rgb(102.976744186, 141.8790697674, 22.1209302326);
 }
 
+/* Área geral da secção */
 #frota {
-  margin: 0px 109px 0px 109px;
+  position: relative; /* permite posicionar as setas em absoluto */
+  margin: 0 109px;
   padding: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: solid 2px red;
 }
+
+/* Centraliza conteúdos internos */
 #frota .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border: solid 2px orange;
-}
-#frota .container h2 {
-  padding: 10px 10px;
-  font-family: "Roboto", sans-serif;
-  color: #8bc53f;
-  font-size: 32px;
-}
-#frota .container .slideshow {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  background-color: blue;
-  height: 200px;
   border: solid 2px red;
 }
-#frota .container .slideshow .carro1,
-#frota .container .slideshow .carro2,
-#frota .container .slideshow .carro3,
-#frota .container .slideshow .carro4 {
-  border: solid 2px green;
-  height: 100%;
+
+/* Título */
+#frota h2 {
+  padding: 10px;
+  font-size: 32px;
+  color: #8dc63f; /* exemplo de verde */
+}
+
+.titulo-frota {
+  position: relative;
+  font-size: 32px;
+  color: #8dc63f;
+  text-align: center;
+}
+
+.titulo-frota::before,
+.titulo-frota::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 200px;
+  height: 3px;
+  background: #cccccc;
+}
+
+.titulo-frota::before {
+  right: 100%;
+  margin-right: 100px;
+}
+
+.titulo-frota::after {
+  left: 100%;
+  margin-left: 100px;
+}
+
+/* “Janela” do slideshow: mostra só uma parte da track */
+.slideshow-viewport {
   width: 100%;
+  overflow: hidden; /* esconde cartões que saem para os lados */
+}
+
+/* Linha de slides que vai ser deslocada com translateX */
+.slideshow-track {
+  display: flex; /* coloca todos os .slide numa linha */
+  transition: transform 0.5s ease; /* animação suave da deslocação */
+}
+
+/* Cada cartão de carro */
+.slide {
+  flex: 0 0 25%; /* 4 cartões visíveis (4 × 25% = 100%) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* espaço entre cartões */
+  box-sizing: border-box;
+}
+
+/* Imagem do carro */
+.slide img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Botões seta (comuns) */
+.arrow {
+  position: absolute; /* em relação ao #frota */
+  top: 50%; /* centro vertical */
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: #8bc53f;
+  font-size: 32px;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Esquerda */
+.arrow.prev {
+  left: 10px;
+}
+
+/* Direita */
+.arrow.next {
+  right: 10px;
+}
+
+/* Efeito hover nas setas */
+.arrow:hover {
+  background: none;
+}
+
+/* Responsivo: em ecrãs mais pequenos, mostra 2 por vista */
+@media (max-width: 900px) {
+  .slide {
+    flex: 0 0 50%; /* 2 slides (2 × 50%) */
+  }
+}
+/* Responsivo: em mobile, 1 por vista */
+@media (max-width: 600px) {
+  .slide {
+    flex: 0 0 100%; /* 1 slide */
+  }
+}
+.car-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.car-card img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.car-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 8px 0 0;
+}
+
+.car-subtitle {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.car-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 14px;
+  margin-top: 4px;
+  border: solid 2px red;
+}
+
+/* Botão RESERVAR */
+.btn-reservar {
+  margin-top: 8px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #8dc63f;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-reservar:hover {
+  background-color: #76a82f;
 }/*# sourceMappingURL=estilos.css.map */

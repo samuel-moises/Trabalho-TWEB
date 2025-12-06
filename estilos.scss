@@ -26,14 +26,14 @@ body {
     font-size: 62.5%;// (62.5% == 10px) Default font size 16px, 100%, 1.0000em
 }
 
-@media (min-width: 1024px) {
+
 .header {
     background: white;
     font-family: $font;
     display: flex;
     flex-direction: column;
     background-color: white;
-    margin: 0 10rem 0 10rem;
+    margin: 0 8vw 0 8vw;
 
     .container {
         display: flex;
@@ -43,7 +43,7 @@ body {
     }
 
     .logo {
-        height: 6rem; // ajusta ao tamanho do logótipo real
+        height: 6rem;
     }
 
     .lang-pequeno {
@@ -93,7 +93,7 @@ body {
 
     }
 }
-}
+
 
 
 //* * * * *  NAVBAR * * * * * //
@@ -107,6 +107,7 @@ body {
 
 
         li {
+            position: relative; //Referência para os filhos com position absolute, neste caso será o dropdown
             a {
                 display: flex;
                 align-content: center;
@@ -132,26 +133,59 @@ body {
                     color:white;
                 }
             } 
+
+            .dropdown-1 {  //Menu dropdown  
+                display: none; // Esconde (display: block - Mostra)
+                position: absolute; //A sua referência é o elemento Pai neste caso Li-Inicio
+                background: white;
+                list-style: none;
+                padding: 0.4px;
+                width: 10rem;
+                z-index: 2;
+
+                
+                li {
+                    padding: 0.1rem;
+                    color: $cinza-texto;
+                    cursor: pointer;
+
+                    
+                    &.drop-1 a {
+                        background: $cinza-claro;
+                        //padding: 1rem;
+                        color: $cinza-texto;
+                        &:hover {
+                            color:$verde;
+                        }
+                    } 
+                }
+            }
+
+            &:hover { //Ativar Dropdown
+                .dropdown-1 {
+                    display: block; //coluna
+                }
+            }
         }
     }
 
-@media (min-width: 481px) and (max-width: 1024px) {
+    
+
+
+    
+
+
+@media (max-width: 900px) { /* Tablet (até 900px) */ 
 
     .container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         grid-template-rows: auto;
-        align-items: center;
-        justify-content: center;
-        margin: 0 40px;
-        gap:5rem;
-        border:solid 1px rgb(255, 0, 187);
-
-        img {
-            grid-column: 2;
-            grid-row: 1;
-            height: 5rem;
-        }
+        align-items: center; //vertical
+        justify-content: center; //horizontal
+        margin: 0 5vw;
+        gap: 1vw;
+        border:solid 1px red;
 
         .lang-pequeno {
             grid-column: 1;
@@ -159,14 +193,15 @@ body {
             font-size: 1.2rem;
             text-align: center;
         }
+
+        img {
+            grid-column: 1;
+            grid-row: 1;
+            height: 5rem;
+        }
     }
 
     
-    
-    
-
-
-
     .login-area,
     .navbar,
     .language-selector span {
@@ -175,22 +210,9 @@ body {
     
 
 }
-
-@media (max-width: 480px) {
-
-    .login-area,
-    .navbar,
-    .language-selector span {
-        display: none !important;
-    }
-
-
-}
-
-
 
 //* * * * *  Formulário * * * * * //
-@media (min-width: 1024px) {
+@media (min-width: 1100px) {
     .hero {
         display: flex;
         justify-content: center;
@@ -211,7 +233,7 @@ body {
         .search-box {
             display:grid;
             align-items: center;
-            grid-template-rows: repeat(6, auto);
+            grid-template-rows: repeat(7, auto);
             grid-template-columns: repeat(2, 1fr);
             row-gap: 0.3rem;
             column-gap: 2rem;
@@ -235,6 +257,7 @@ body {
                     margin: 1rem;
                 }
             }
+
 
             input,
             select {
@@ -267,11 +290,27 @@ body {
                      background: darken($verde1, 10%);
                 }
             }
+
+            
+            #checkbox-veiculo {
+                display: flex;
+                gap: 1rem; /* Espaço entre opções */
+                align-items: center;
+                font-size: 0.8rem;
+                padding: 7px;
+
+                label {
+                display: flex;
+                align-items: center;
+                gap: 0; /* Espaço entre checkbox e texto */
+                cursor: pointer;
+                }
+            }
         }
     }
 }
 
-@media (min-width: 481px) and (max-width: 1024px) { 
+@media (min-width: 600px) and (max-width: 1100px) {  //nos 1100px evita sobreposição barra menus
     .hero {
         width: 100%;
         display: flex;
@@ -336,6 +375,7 @@ body {
             grid-row: 4;
         }
 
+    
         input,
         select {
             border-radius: 5px;
@@ -367,12 +407,26 @@ body {
                 background: darken($verde1, 10%);
             }
         }
+
+        #checkbox-veiculo {
+            display: flex;
+            gap: 1rem; /* Espaço entre opções */
+            align-items: center;
+            font-size: 0.8rem;
+            padding: 7px;
+
+            label {
+                display: flex;
+                align-items: center;
+                gap: 0; /* Espaço entre checkbox e texto */
+                cursor: pointer;
+            }
+        }
     }
-
 }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .hero {
         width: 100%;
         display: flex;
@@ -392,7 +446,7 @@ body {
         display:grid;
         align-items: center;
         width: 100%;
-        grid-template-rows: repeat(10, auto);
+        grid-template-rows: repeat(11, auto);
         grid-template-columns: 1fr; //Apenas 1 coluna
         row-gap: 1rem;
         background: #f2f2f2;
@@ -420,7 +474,7 @@ body {
 
         span {
             font-size: 0.9rem;
-            text-align: right;
+            text-align: left;
                         
         }
 
@@ -439,6 +493,21 @@ body {
                 background: darken($verde1, 10%);
             }
         }
+
+        #checkbox-veiculo {
+            display: flex;
+            gap: 1rem; /* Espaço entre opções */
+            align-items: center;
+            font-size: 0.8rem;
+            padding: 7px;
+
+            label {
+            display: flex;
+            align-items: center;
+            gap: 0; /* Espaço entre checkbox e texto */
+            cursor: pointer;
+            }
+        }
     }
 }
 
@@ -449,148 +518,125 @@ body {
 /* Área geral da secção */
 #frota {
   position: relative;          /* permite posicionar as setas em absoluto */
-  margin: 0 109px;
-  padding: 50px;
+  margin: 0 8vw;
+  padding: 5vw;
   border: solid 2px red;
+
+    /* Centraliza conteúdos internos */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: solid 2px red;
+    }
+
+    /* Título */
+    h2 {
+        position: relative;
+        padding: 10px;
+        font-size: 2rem;
+        color: $verde1;
+        text-align: center;          
+    }
 }
 
-/* Centraliza conteúdos internos */
-#frota .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: solid 2px red;
-}
-
-/* Título */
-#frota h2 {
-  padding: 10px;
-  font-size: 32px;
-  color: #8dc63f;              /* exemplo de verde */
-}
-
-.titulo-frota {
-  position: relative;
-  font-size: 32px;
-  color: #8dc63f;
-  text-align: center;
-}
-
-.titulo-frota::before,
-.titulo-frota::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 200px;
-  height: 3px;
-  background: #cccccc;
-}
-
-.titulo-frota::before {
-  right: 100%;
-  margin-right: 100px;
-}
-
-.titulo-frota::after {
-  left: 100%;
-  margin-left: 100px;
-}
 
 /* “Janela” do slideshow: mostra só uma parte da track */
 .slideshow-viewport {
-  width: 100%;
-  overflow: hidden;            /* esconde cartões que saem para os lados */
+    width: 100%;
+    overflow: hidden;            /* esconde cartões que saem para os lados */
 }
 
 /* Linha de slides que vai ser deslocada com translateX */
 .slideshow-track {
-  display: flex;               /* coloca todos os .slide numa linha */
-  transition: transform 0.5s ease; /* animação suave da deslocação */
+    display: flex;               /* coloca todos os .slide numa linha */
+    transition: transform 0.5s ease; /* animação suave da deslocação */
 }
 
 /* Cada cartão de carro */
 .slide {
-  flex: 0 0 25%;               /* 4 cartões visíveis (4 × 25% = 100%) */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;               /* espaço entre cartões */
-  box-sizing: border-box;
+    flex: 0 0 25%;               /* 4 cartões visíveis (4 × 25% = 100%) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;               /* espaço entre cartões */
+    box-sizing: border-box;
+
+    /* Imagem do carro */
+    .slide img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 }
 
-/* Imagem do carro */
-.slide img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+
 
 /* Botões seta (comuns) */
 .arrow {
-  position: absolute;          /* em relação ao #frota */
-  top: 50%;                    /* centro vertical */
-  transform: translateY(-50%);
-  border: none;
-  background: none;
-  color: $verde;
-  font-size: 32px;
-  padding: 12px 16px;
-  cursor: pointer;
-  border-radius: 50%;
+    position: absolute;          // em relação ao #frota
+    top: 50%;                    // centro vertical
+    transform: translateY(-50%); //A propriedade transform: translateY(-50%) em CSS desloca um elemento verticalmente em relação à sua posição original, movendo-o para cima metade da sua própria altura
+    border: none;
+    background: none;
+    color: $verde;
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
 }
 
 /* Esquerda */
 .arrow.prev {
-  left: 10px;
+    left: 10px;
 }
 
 /* Direita */
 .arrow.next {
-  right: 10px;
+    right: 10px;
 }
 
 /* Efeito hover nas setas */
 .arrow:hover {
-  background: none;
+    background: none;
 }
 
-/* Responsivo: em ecrãs mais pequenos, mostra 2 por vista */
-@media (max-width: 900px) {
-  .slide {
-    flex: 0 0 50%;             /* 2 slides (2 × 50%) */
+@media (max-width: 900px) /* Tablet 2 por vista (até 600px) */ {
+    .slide {
+        flex: 0 0 50%;             /* 2 slides (2 × 50%) */
   }
 }
 
-/* Responsivo: em mobile, 1 por vista */
-@media (max-width: 600px) {
-  .slide {
-    flex: 0 0 100%;            /* 1 slide */
+
+@media (max-width: 600px) { /* MOBILE 1 por vista (até 600px) */
+    .slide {
+        flex: 0 0 100%;            /* 1 slide */
   }
 }
 
 .car-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 16px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  height: 100%;
-  box-sizing: border-box;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+    box-sizing: border-box;
+
+    img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    }
 }
 
-.car-card img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
 
 .car-name {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 8px 0 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 8px 0 0;
 }
 
 .car-subtitle {
@@ -600,31 +646,30 @@ body {
 }
 
 .car-icons {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  font-size: 14px;
-  margin-top: 4px;
-  border: solid 2px red;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    font-size: 14px;
+    margin-top: 4px;
+    border: solid 2px red;
 }
 
 /* Botão RESERVAR */
 .btn-reservar {
-  margin-top: 8px;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 4px;
-  background-color: #8dc63f;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
+    margin-top: 8px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #8dc63f;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 
-.btn-reservar:hover {
-  background-color: #76a82f;
+    &:hover {
+    background-color: #76a82f;
+    }
 }
-
 
 
 //* * * * *  NOTICIAS (CSS GRID LAYOUT) * * * * * //
@@ -644,7 +689,7 @@ body {
             //padding: 0 5rem 0 5rem;
             
             .linha1 {
-                grid-column: 1 / 4;
+                grid-column: 1 / -1;
                 text-align: center;
                 padding: 2rem;
                 color: $verde1;
@@ -668,7 +713,8 @@ body {
     }
 
 
-@media (max-width: 480px) { /* MOBILE (até 480px) */
+
+@media (max-width: 600px) { /* MOBILE (até 600px - Apenas 1 breackpoint como site original) */
 
     .noticias {
         background-color: $cinza-claro;
@@ -678,7 +724,7 @@ body {
 
         .tabela {
             display: grid;   
-            grid-auto-rows: repeat(7, auto);//8 Linhas Automáticas
+            grid-auto-rows: repeat(7, auto);//7 Linhas Automáticas
             grid-template-columns: 1fr; //Apenas 1 coluna
             grid-column-gap: 0;
             row-gap: 1.5rem;
@@ -738,7 +784,6 @@ body {
 
 //* * * * *  FOOTER * * * * * //
 
-//@media (min-width: 1024px) { /* Telas Grandes */
     .footer {
         display: flex;
         flex-direction: column;
@@ -747,7 +792,8 @@ body {
         flex-shrink: 1;
         font-family: $font;
         padding: 2rem;
-        margin: 0 8rem 0 8rem;
+        margin: 0 1vw 0 1vw;
+ 
 
 
 
@@ -794,7 +840,7 @@ body {
 
                 li {
                     list-style-type: none; // pontos
-                    text-align: center;
+                    text-align: left;
                     flex-grow: 1; //cresce á mesma proporção janela
 
                     a {
@@ -810,7 +856,7 @@ body {
     }
 //}
 
-@media (min-width: 481px) and (max-width: 1024px) { /* Tablet (entre 481px e 1024px) */
+@media (max-width: 900px) { /* Tablet (até 900px) */
     .footer {
         margin: 0;
        }
@@ -843,7 +889,7 @@ body {
     } 
 }
 
-@media (max-width: 480px) { /* MOBILE (até 480px) */
+@media (max-width: 600px) { /* MOBILE (até 600px) */
     .footer {
         margin: 0;
     }
@@ -861,7 +907,9 @@ body {
         li {
             list-style-type: none; // pontos
             padding: 0.5rem;
+            text-align: center;
             width: auto;
+
 
             a {
                 text-decoration: none; // sublinhado link

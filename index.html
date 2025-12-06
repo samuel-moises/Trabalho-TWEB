@@ -26,12 +26,18 @@
                     <span>&#x1F1F5;&#x1F1F9; PORTUGAL &#9660; </span>
                 </div>
             </div>
-            <div class="lang-pequeno">&#x1F1F5;&#x1F1F9;&#9660;</div>
+            <div class="lang-pequeno">&#x1F1F5;&#x1F1F9;&#9660;</div> <!--Usado apensa para versão reduzida-->
         </div>
 
         <nav class="navbar">
             <ul class="menu">
-                <li class="active"><a href="#">INÍCIO</a></li>
+                <li class="active"><a href="#">INÍCIO</a>
+                    <ul class="dropdown-1">
+                        <li class="drop-1"><a href="#">Opção 1</a></li>
+                        <li class="drop-1"><a href="#">Opção 2</a></li>
+                        <li class="drop-1"><a href="#">Opção 3</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">FROTA</a></li>
                 <li><a href="#">ESTAÇÕES</a></li>
                 <li><a href="#">NOTÍCIAS</a></li>
@@ -51,7 +57,10 @@
 
             <!-- Caixa de pesquisa -->
             <form class="search-box">
-                <div class="linha1"><p>PESQUISAR</p></div>  
+                <div class="linha1"><p>PESQUISAR</p></div>
+                
+
+
                 <select id="levantamento" required>
                     <option value="" disabled selected hidden>Levantamento</option>
                     <option value="HOR">Faial-Airoport</option>
@@ -70,6 +79,13 @@
                 <input type="time" id="hora-devolução" value="10:00" required>
                 <span>Data de nascimento do condutor:</span>
                 <input type="date" id="data-nascimento" placeholder="AAAA-MM-DD">
+     
+                <div id="checkbox-veiculo">
+                    <label><input type="checkbox" value="1" name="Carro">Carro</label>
+                    <label><input type="checkbox" value="2" name="Carrinha">Carrinha</label>
+                </div>
+
+
                 <button type="submit" id="btn-search">Pesquisar 🔍</button>
             </form>
     </section>
@@ -216,13 +232,13 @@
         <div class="linha2-2">Carro de luxo e Serviço de Motorista</div>
         <div class="linha2-3">50 Anos</div>
         <div class="img1">
-            <img src="img/comerciais_eletricos.jpg" alt="Veículos comerciais e elétricos" id="item-1">
+            <img src="img/comerciais_eletricos.jpg" alt="Veículos comerciais e elétricos">
         </div>
         <div class="img2">
-            <img src="img/carrosluxo.jpg" alt="Veículos comerciais e elétricos" id="item-2">  
+            <img src="img/carrosluxo.jpg" alt="Veículos comerciais e elétricos">  
         </div>
         <div class="img3">
-            <img src="img/50anos.png" alt="Veículos comerciais e elétricos" class="img-linha3" id="item-3">
+            <img src="img/50anos.png" alt="Veículos comerciais e elétricos">
         </div>
     </div>
 </section>

@@ -170,3 +170,30 @@
                 </div>
             </form>
     </section>
+
+
+
+
+
+
+Linhas Titulos e titulos têm de estar em position relative
+
+.titulo-frota::before,
+.titulo-frota::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 600px;
+  height: 3px;
+  background: #cccccc;
+}
+
+.titulo-frota::before {
+  right: 100%;
+  margin-right: 100px;
+}
+
+.titulo-frota::after {
+  left: 100%;
+  margin-left: 100px;
+}

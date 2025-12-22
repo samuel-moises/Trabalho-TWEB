@@ -122,31 +122,36 @@ body {
 }
 
 @media (max-width: 900px) { /* Tablet (até 900px) */
+  .header .header-actions {
+    display: none;
+  }
+  .language-selector span {
+    display: none;
+  }
   .container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: center;
-    margin: 0 5vw;
-    gap: 1vw;
+    margin: 0;
+    row-gap: 5px;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
     border: solid 1px red;
   }
   .container .lang-pequeno {
+    border: 2px solid blue;
     grid-column: 1;
     grid-row: 1;
     font-size: 1.2rem;
     text-align: center;
   }
   .container img {
-    grid-column: 1;
+    border: solid 1px red;
+    grid-column: 1/-1;
     grid-row: 1;
     height: 5rem;
-  }
-  .login-area,
-  .navbar,
-  .language-selector span {
-    display: none !important;
   }
 }
 @media (min-width: 1100px) {
@@ -776,4 +781,51 @@ body {
 }
 .social svg {
   padding: 0.5rem;
+}
+
+.header {
+  position: relative;
+}
+
+/* Botão escondido em  versão desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* DESKTOP */
+@media (min-width: 900px) {
+  .navbar {
+    display: block;
+  }
+}
+/* TABLET E MOBILE */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 9999;
+  }
+  .navbar.active {
+    display: block;
+  }
+  .navbar .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar .menu li a {
+    padding: 15px;
+    display: block;
+  }
 }/*# sourceMappingURL=estilos.css.map */

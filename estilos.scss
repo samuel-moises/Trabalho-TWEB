@@ -26,6 +26,8 @@ body {
     font-size: 62.5%;// (62.5% == 10px) Default font size 16px, 100%, 1.0000em
 }
 
+//* * * * *  HEADER * * * * * //
+
 
 .header {
     background: white;
@@ -93,6 +95,7 @@ body {
 
     }
 }
+
 
 
 
@@ -169,25 +172,32 @@ body {
         }
     }
 
-    
-
-
-    
-
 
 @media (max-width: 900px) { /* Tablet (até 900px) */ 
 
+    .header {
+        .header-actions {
+            display: none; //ocultar Header Actions
+        }
+    }
+    .language-selector span {
+        display: none; //Ocultar Portugal
+    }
+
     .container {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: auto;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(3, 1fr);
         align-items: center; //vertical
         justify-content: center; //horizontal
-        margin: 0 5vw;
-        gap: 1vw;
+        margin: 0;
+        row-gap: 5px;
+        column-gap: 5px;
         border:solid 1px red;
 
+
         .lang-pequeno {
+            border: 2px solid blue;
             grid-column: 1;
             grid-row: 1;
             font-size: 1.2rem;
@@ -195,18 +205,17 @@ body {
         }
 
         img {
-            grid-column: 1;
+            border: solid 1px red;
+            grid-column: 1 / -1;
             grid-row: 1;
             height: 5rem;
         }
     }
 
-    
-    .login-area,
-    .navbar,
-    .language-selector span {
-        display: none !important;
-    }
+
+
+
+
     
 
 }
@@ -600,12 +609,11 @@ body {
     background: none;
 }
 
-@media (max-width: 900px) /* Tablet 2 por vista (até 600px) */ {
+@media (max-width: 900px) /* Tablet 2 por vista (até 900px) */ {
     .slide {
         flex: 0 0 50%;             /* 2 slides (2 × 50%) */
   }
 }
-
 
 @media (max-width: 600px) { /* MOBILE 1 por vista (até 600px) */
     .slide {
@@ -938,3 +946,62 @@ body {
    padding: 0.5rem;
     }
 }
+
+
+//* * * * SANDWICH MENU - OPÇÃO MOBILE * * * * //
+
+
+.header {
+    position: relative;
+}
+
+/* Botão escondido em  versão desktop */
+.menu-toggle {
+    display: none;
+}
+
+/* DESKTOP */
+@media (min-width: 900px) {
+    .navbar {
+        display: block;
+    }
+}
+
+/* TABLET E MOBILE */
+@media (max-width: 900px) {
+
+    .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        padding: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 9999;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar .menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar .menu li a {
+        padding: 15px;
+        display: block;
+    }
+}
+
+

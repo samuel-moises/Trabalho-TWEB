@@ -61,3 +61,16 @@ nextButton.addEventListener('click', function () {
 
 // Chama uma vez para garantir a posição inicial correta
 updatePosition();
+
+// *** JAVASCRIPT FUNÇÃO BOTÃO SANDWICH MENU ***
+
+document.addEventListener('DOMContentLoaded', function () {
+    const botao = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.navbar');
+
+    if (!botao || !menu) return;
+
+    botao.addEventListener('click', function () {
+        menu.classList.toggle('active');
+    });
+});

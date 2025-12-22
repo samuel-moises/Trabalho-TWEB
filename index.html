@@ -7,7 +7,11 @@
 <body>
     <header class="header">
         <div class="container">
+            <div class="lang-pequeno">&#x1F1F5;&#x1F1F9;&#9660;</div> <!--Usado apensa para versão reduzida-->
+            
             <img src="img/logo.png" alt="Ilha Verde Rent a Car" class="logo">
+            
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"> ☰ </button> <!-- BOTÃO SANDWICH MENU -->
 
             <div class="header-actions">
                 <div class="login-area">
@@ -26,15 +30,11 @@
                     <span>&#x1F1F5;&#x1F1F9; PORTUGAL &#9660; </span>
                 </div>
             </div>
-            <div class="lang-pequeno">&#x1F1F5;&#x1F1F9;&#9660;</div> <!--Usado apensa para versão reduzida-->
+
         </div>
 
-<!-- BOTÃO SANDWICH MENU (só aparece em resolução mobile) -->
-        <button class="menu-toggle"
-                aria-label="Abrir menu"
-                aria-expanded="false">
-            ☰
-        </button>
+
+
 
         <nav class="navbar">
             <ul class="menu">
@@ -72,12 +72,18 @@
                     <option value="" disabled selected hidden>Levantamento</option>
                     <option value="HOR">Faial-Airoport</option>
                     <option value="CHO">Faial-Gare-Pier</option>
+                    <option value="LIS">Lisboa</option>
+                    <option value="OPO">Porto</option>
+                    <option value="FAO">Faro</option>
                 </select>
 
-                <select id="devolução" required>
+                <select id="devolução">
                     <option value="" disabled selected hidden>Devolução</option>
                     <option value="HOR">Faial-Airoport</option>
                     <option value="CHO">Faial-Gare-Pier</option>
+                    <option value="LIS">Lisboa</option>
+                    <option value="OPO">Porto</option>
+                    <option value="FAO">Faro</option>
                 </select>
 
                 <input type="date" id="data-levantamento" required>
@@ -92,6 +98,9 @@
                     <label><input type="checkbox" value="2" name="Carrinha">Carrinha</label>
                 </div>
 
+                <div id="checkbox-devolução">
+                    <label><input type="checkbox" id="mostrar" name="devolução_diferente">Devolução em Local Diferente</label>
+                </div>
 
                 <button type="submit" id="btn-search">Pesquisar 🔍</button>
             </form>

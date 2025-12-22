@@ -62,8 +62,9 @@ nextButton.addEventListener('click', function () {
 // Chama uma vez para garantir a posição inicial correta
 updatePosition();
 
-// *** JAVASCRIPT FUNÇÃO BOTÃO SANDWICH MENU ***
 
+//*****************************************************************
+// *** FUNÇÃO BOTÃO SANDWICH MENU ***
 document.addEventListener('DOMContentLoaded', function () {
     const botao = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.navbar');
@@ -74,3 +75,26 @@ document.addEventListener('DOMContentLoaded', function () {
         menu.classList.toggle('active');
     });
 });
+//*****************************************************************
+
+// *** Devolução em local diferente quando a checkbox é selecionada ***
+
+const devolução = document.getElementById('devolução');
+const checkbox = document.getElementById('mostrar');
+
+// Ocultar levantamento inicialmente
+devolução.style.visibility = 'hidden';
+
+// Mostrar/ocultar quando clica na checkbox
+//|() =>| É uma função arrow (função anónima) que será executada quando o evento acontecer. () Função Não recebe Parametros {} Bloco de código que será corrido
+checkbox.addEventListener('change', () => {
+    
+if (checkbox.checked) {
+        devolução.style.visibility = 'visible'; // Mostra
+    } else {
+        devolução.style.visibility = 'hidden'; // Oculta mas mantém espaço
+    }
+});
+
+
+//****************************************************************** */

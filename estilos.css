@@ -20,9 +20,6 @@ body {
 .header .logo {
   height: 6rem;
 }
-.header .lang-pequeno {
-  display: none !important;
-}
 .header .header-actions {
   display: flex;
   align-items: center;
@@ -121,30 +118,30 @@ body {
   display: block;
 }
 
+@media (min-width: 900px) {
+  .lang-pequeno {
+    display: none !important;
+  }
+}
 @media (max-width: 900px) { /* Tablet (até 900px) */
-  .header .header-actions {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .container .lang-pequeno {
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+  }
+  .container .header-actions {
     display: none;
   }
   .language-selector span {
     display: none;
   }
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: solid 1px red;
-  }
-  .header .lang-pequeno {
-    border: 2px solid blue;
-    grid-column: 1;
-    grid-row: 1;
-    font-size: 1.2rem;
-    text-align: center;
-  }
-  .header img {
-    border: solid 1px red;
-    grid-column: 1/-1;
-    grid-row: 1;
+  img {
     height: 5rem;
   }
 }
@@ -230,6 +227,21 @@ body {
     gap: 0; /* Espaço entre checkbox e texto */
     cursor: pointer;
   }
+  .hero .search-box #checkbox-devolução {
+    display: flex;
+    gap: 1rem; /* Espaço entre opções */
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 7px;
+  }
+  .hero .search-box #checkbox-devolução label {
+    display: flex;
+    gap: 0;
+    cursor: pointer;
+  }
+  .hero .search-box #checkbox-devolução input[type=checkbox] {
+    transform: scale(0.6);
+  }
 }
 @media (min-width: 600px) and (max-width: 1100px) {
   .hero {
@@ -249,7 +261,7 @@ body {
     display: grid;
     align-items: center;
     width: 100%;
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(6, auto);
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1rem;
     -moz-column-gap: 2rem;
@@ -301,8 +313,21 @@ body {
     font-size: 0.9rem;
     text-align: right;
   }
+  .hero .search-box #checkbox-devolução {
+    grid-column: 1/2;
+    grid-row: 5;
+    display: flex;
+    font-size: 0.8rem;
+  }
+  .hero .search-box #checkbox-devolução label {
+    display: flex;
+  }
+  .hero .search-box #checkbox-devolução input[type=checkbox] {
+    transform: scale(0.6);
+  }
   .hero .search-box #btn-search {
     justify-self: center;
+    grid-row: 6;
     grid-column: 1/-1;
     width: 25%;
     padding: 10px;
@@ -375,6 +400,16 @@ body {
     font-size: 0.9rem;
     text-align: left;
   }
+  .search-box #checkbox-devolução {
+    display: flex;
+    font-size: 0.8rem;
+  }
+  .search-box #checkbox-devolução label {
+    display: flex;
+  }
+  .search-box #checkbox-devolução input[type=checkbox] {
+    transform: scale(0.6);
+  }
   .search-box #btn-search {
     justify-self: center;
     grid-column: 1/-1;
@@ -408,7 +443,6 @@ body {
   position: relative; /* permite posicionar as setas em absoluto */
   margin: 0 8vw;
   padding: 5vw;
-  border: solid 2px red;
   /* Centraliza conteúdos internos */
   /* Título */
 }
@@ -416,7 +450,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid 2px red;
 }
 #frota h2 {
   position: relative;
@@ -530,7 +563,6 @@ body {
   gap: 12px;
   font-size: 14px;
   margin-top: 4px;
-  border: solid 2px red;
 }
 
 /* Botão RESERVAR */

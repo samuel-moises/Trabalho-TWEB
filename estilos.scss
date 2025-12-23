@@ -26,7 +26,9 @@ body {
     font-size: 62.5%;// (62.5% == 10px) Default font size 16px, 100%, 1.0000em
 }
 
-//* * * * *  HEADER * * * * * //
+//* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
+//* * * * * * * * * * * * * * * * * * * * * * * * * * HEADER * * * * * * * * * * * * * * * * * * * * * * * * * *//
+//* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
 
 .header {
     background: white;
@@ -44,6 +46,7 @@ body {
     }
 
     .logo {
+
         height: 6rem;
     }
 
@@ -96,7 +99,9 @@ body {
 
 
 
-//* * * * *  NAVBAR * * * * * //
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
+//* * * * * * * * * * * * * * * * * * * * * * * * * * NAVBAR * * * * * * * * * * * * * * * * * * * * * * * * * *//
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
 
 
     .menu {
@@ -206,8 +211,33 @@ body {
 }
 
 
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
+//* * * * * * * * * * * * * * * * * * * * * * * * * FORMULÀRIO * * * * * * * * * * * * * * * * * * * * * * * * *//
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
 
-//* * * * *  Formulário * * * * * //
+@mixin checkbox-format { //Formatação das checkbox no formulário
+    display: flex; 
+    justify-content: flex-start; //Alinha esquerda
+    align-items: center; // Alinha verticalmente
+    font-size: 0.8rem;
+    padding: 7px;
+    gap: 1rem; /* Espaço entre opções */
+
+        label {
+            display: inline-flex; // Mantém checkbox e texto na mesma linha
+            align-items: center;
+            gap: 0.4rem; //Espaço entre checkbox e texto
+            white-space: nowrap; // Evita quebra de linha no texto -- IMPORTANTE
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] {
+            transform: scale(1); // Ajusta tamanho da checkbox
+            margin: 0; // Remove margens extras
+        }
+}
+
+
 @media (min-width: 1100px) {
     .hero {
         display: flex;
@@ -239,7 +269,7 @@ body {
             border-left: solid #87ba1d80 15px;
             border-right: solid #87ba1d80 15px;
             padding: 0 1rem 0px 1rem;
-            width: 500px; //largura fixa para o form OK
+            width: 450px; //largura fixa para o form OK
             margin: 0;
             position: absolute;
             z-index: 2;
@@ -264,7 +294,7 @@ body {
                 color: $cinza-texto;
             }
 
-            span {
+            span { //Texto -Data Nascimento condutor
                 display: block ;
                 font-size: 0.9rem;
                 text-align: right;
@@ -286,41 +316,11 @@ body {
                      background: darken($verde1, 10%);
                 }
             }
-
-            
-            #checkbox-veiculo {
-                display: flex;
-                gap: 1rem; /* Espaço entre opções */
-                align-items: center;
-                font-size: 0.8rem;
-                padding: 7px;
-
-                label {
-                    display: flex;
-                    align-items: center;
-                    gap: 0; /* Espaço entre checkbox e texto */
-                    cursor: pointer;
-                }
-            }
          
-
+            #checkbox-veiculo, 
             #checkbox-devolução {
-                display: flex;
-                gap: 1rem; /* Espaço entre opções */
-                align-items: center;
-                font-size: 0.8rem;
-                padding: 7px;
-
-                label {
-                    display: flex;
-                    gap: 0;
-                    cursor: pointer;
-                }
-                
-                input[type="checkbox"] {
-                    transform:scale(0.6);
-                }
-            }
+                @include checkbox-format()
+            }  
         }
 
     }
@@ -383,7 +383,7 @@ body {
         }
 
 
-        span {
+        span { //Texto -Data Nascimento condutor
             grid-column: 2 / 3;
             grid-row: 4;
         }
@@ -403,28 +403,17 @@ body {
             color: $cinza-texto;
         }
 
-        span {
+        span { //Texto -Data Nascimento condutor
             display: block ;
             font-size: 0.9rem;
             text-align: right;
                         
         }
 
+        #checkbox-veiculo, 
         #checkbox-devolução {
-            grid-column: 1 / 2;
-            grid-row: 5;
-            display: flex;
-            font-size: 0.8rem;
-
-            label {
-                display: flex;
-            }
-
-            input[type="checkbox"] {
-                    transform:scale(0.6);
-            }
-        }
-
+            @include checkbox-format()
+        } 
 
         #btn-search {
             justify-self: center;
@@ -440,21 +429,6 @@ body {
                             
             &:hover {
                 background: darken($verde1, 10%);
-            }
-        }
-
-        #checkbox-veiculo {
-            display: flex;
-            gap: 1rem; /* Espaço entre opções */
-            align-items: center;
-            font-size: 0.8rem;
-            padding: 7px;
-
-            label {
-                display: flex;
-                align-items: center;
-                gap: 0; /* Espaço entre checkbox e texto */
-                cursor: pointer;
             }
         }
     }
@@ -507,23 +481,15 @@ body {
             color: $cinza-texto;
         }
 
-        span {
+        span { //Texto -Data Nascimento condutor
             font-size: 0.9rem;
             text-align: left;
                         
         }
 
+        #checkbox-veiculo, 
         #checkbox-devolução {
-            display: flex;
-            font-size: 0.8rem;
-
-            label {
-                display: flex;
-            }
-
-            input[type="checkbox"] {
-                    transform:scale(0.6);
-            }
+            @include checkbox-format()
         }
 
         #btn-search {
@@ -560,7 +526,9 @@ body {
 }
 
 
-//* * * * *  Frota* * * * * //  
+//* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
+//* * * * * * * * * * * * * * * * * * * * * * * * * * FROTA * * * * * * * * * * * * * * * * * * * * * * * * * *//
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
     
     
 /* Área geral da secção */
@@ -718,8 +686,10 @@ body {
     }
 }
 
+//* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
+//* * * * * * * * * * * * * * * * * * * * * * * * * NOTICIAS * * * * * * * * * * * * * * * * * * * * * * * * * *//
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
 
-//* * * * *  NOTICIAS (CSS GRID LAYOUT) * * * * * //
 
 
     .noticias {
@@ -829,7 +799,9 @@ body {
     }
 }
 
-//* * * * *  FOOTER * * * * * //
+//* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
+//* * * * * * * * * * * * * * * * * * * * * * * * * * FOOTER * * * * * * * * * * * * * * * * * * * * * * * * * *//
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
 
     .footer {
         display: flex;
@@ -971,8 +943,9 @@ body {
     }  
 }
 
-  
-//* * * * *  FOOTER SOCIAL * * * * * //
+//* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
+//* * * * * * * * * * * * * * * * * * * * * * * * FOOTER SOCIAL * * * * * * * * * * * * * * * * * * * * * * * *//
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
 
 .social {
     background-color: $cinza-claro;
@@ -982,14 +955,14 @@ body {
 
 
     svg {
-   padding: 0.5rem;
+        padding: 0.5rem;
     }
 }
 
 
-//* * * * SANDWICH MENU - OPÇÃO MOBILE * * * * //
-
-
+//* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
+//* * * * * * * * * * * * * * * * * * * * SANDWICH MENU - OPÇÃO MOBILE * * * * * * * * * *  * * * * * * * * * *//
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
 .header {
     position: relative;
 }
@@ -999,15 +972,13 @@ body {
     display: none;
 }
 
-/* DESKTOP */
-@media (min-width: 900px) {
+@media (min-width: 900px) { /* DESKTOP */
     .navbar {
         display: block;
     }
 }
 
-/* TABLET E MOBILE */
-@media (max-width: 900px) {
+@media (max-width: 900px) { /* Tablet (até 900px) */
 
     .menu-toggle {
         display: block;

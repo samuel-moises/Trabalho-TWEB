@@ -174,7 +174,7 @@ body {
     border-left: solid rgba(135, 186, 29, 0.5019607843) 15px;
     border-right: solid rgba(135, 186, 29, 0.5019607843) 15px;
     padding: 0 1rem 0px 1rem;
-    width: 500px;
+    width: 450px;
     margin: 0;
     position: absolute;
     z-index: 2;
@@ -214,33 +214,27 @@ body {
   .hero .search-box #btn-search:hover {
     background: rgb(102.976744186, 141.8790697674, 22.1209302326);
   }
-  .hero .search-box #checkbox-veiculo {
-    display: flex;
-    gap: 1rem; /* Espaço entre opções */
-    align-items: center;
-    font-size: 0.8rem;
-    padding: 7px;
-  }
-  .hero .search-box #checkbox-veiculo label {
-    display: flex;
-    align-items: center;
-    gap: 0; /* Espaço entre checkbox e texto */
-    cursor: pointer;
-  }
+  .hero .search-box #checkbox-veiculo,
   .hero .search-box #checkbox-devolução {
     display: flex;
-    gap: 1rem; /* Espaço entre opções */
+    justify-content: flex-start;
     align-items: center;
     font-size: 0.8rem;
     padding: 7px;
+    gap: 1rem; /* Espaço entre opções */
   }
+  .hero .search-box #checkbox-veiculo label,
   .hero .search-box #checkbox-devolução label {
-    display: flex;
-    gap: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
     cursor: pointer;
   }
+  .hero .search-box #checkbox-veiculo input[type=checkbox],
   .hero .search-box #checkbox-devolução input[type=checkbox] {
-    transform: scale(0.6);
+    transform: scale(1);
+    margin: 0;
   }
 }
 @media (min-width: 600px) and (max-width: 1100px) {
@@ -313,17 +307,27 @@ body {
     font-size: 0.9rem;
     text-align: right;
   }
+  .hero .search-box #checkbox-veiculo,
   .hero .search-box #checkbox-devolução {
-    grid-column: 1/2;
-    grid-row: 5;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     font-size: 0.8rem;
+    padding: 7px;
+    gap: 1rem; /* Espaço entre opções */
   }
+  .hero .search-box #checkbox-veiculo label,
   .hero .search-box #checkbox-devolução label {
-    display: flex;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+    cursor: pointer;
   }
+  .hero .search-box #checkbox-veiculo input[type=checkbox],
   .hero .search-box #checkbox-devolução input[type=checkbox] {
-    transform: scale(0.6);
+    transform: scale(1);
+    margin: 0;
   }
   .hero .search-box #btn-search {
     justify-self: center;
@@ -339,19 +343,6 @@ body {
   }
   .hero .search-box #btn-search:hover {
     background: rgb(102.976744186, 141.8790697674, 22.1209302326);
-  }
-  .hero .search-box #checkbox-veiculo {
-    display: flex;
-    gap: 1rem; /* Espaço entre opções */
-    align-items: center;
-    font-size: 0.8rem;
-    padding: 7px;
-  }
-  .hero .search-box #checkbox-veiculo label {
-    display: flex;
-    align-items: center;
-    gap: 0; /* Espaço entre checkbox e texto */
-    cursor: pointer;
   }
 }
 @media (max-width: 600px) {
@@ -400,15 +391,27 @@ body {
     font-size: 0.9rem;
     text-align: left;
   }
+  .search-box #checkbox-veiculo,
   .search-box #checkbox-devolução {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     font-size: 0.8rem;
+    padding: 7px;
+    gap: 1rem; /* Espaço entre opções */
   }
+  .search-box #checkbox-veiculo label,
   .search-box #checkbox-devolução label {
-    display: flex;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+    cursor: pointer;
   }
+  .search-box #checkbox-veiculo input[type=checkbox],
   .search-box #checkbox-devolução input[type=checkbox] {
-    transform: scale(0.6);
+    transform: scale(1);
+    margin: 0;
   }
   .search-box #btn-search {
     justify-self: center;
@@ -818,14 +821,12 @@ body {
   display: none;
 }
 
-/* DESKTOP */
-@media (min-width: 900px) {
+@media (min-width: 900px) { /* DESKTOP */
   .navbar {
     display: block;
   }
 }
-/* TABLET E MOBILE */
-@media (max-width: 900px) {
+@media (max-width: 900px) { /* Tablet (até 900px) */
   .menu-toggle {
     display: block;
     font-size: 2rem;

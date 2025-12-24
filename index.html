@@ -57,6 +57,7 @@
         </nav>
     </header>
 
+    
 <!-- Formulário -->
 
     <section class="hero">
@@ -70,20 +71,20 @@
 
                 <select id="levantamento" required>
                     <option value="" disabled selected hidden>Levantamento</option>
-                    <option value="HOR">Faial-Airoport</option>
-                    <option value="CHO">Faial-Gare-Pier</option>
-                    <option value="LIS">Lisboa</option>
-                    <option value="OPO">Porto</option>
-                    <option value="FAO">Faro</option>
+                    <option value="Faial-Airoport">Faial-Airoport</option>
+                    <option value="Faial-Gare-Pier">Faial-Gare-Pier</option>
+                    <option value="Lisboa">Lisboa</option>
+                    <option value="Porto">Porto</option>
+                    <option value="Faro">Faro</option>
                 </select>
 
                 <select id="devolução">
                     <option value="" disabled selected hidden>Devolução</option>
-                    <option value="HOR">Faial-Airoport</option>
-                    <option value="CHO">Faial-Gare-Pier</option>
-                    <option value="LIS">Lisboa</option>
-                    <option value="OPO">Porto</option>
-                    <option value="FAO">Faro</option>
+                    <option value="Faial-Airoport">Faial-Airoport</option>
+                    <option value="Faial-Gare-Pier">Faial-Gare-Pier</option>
+                    <option value="Lisboa">Lisboa</option>
+                    <option value="Porto">Porto</option>
+                    <option value="Faro">Faro</option>
                 </select>
 
                 <input type="date" id="data-levantamento" required>
@@ -99,13 +100,18 @@
                 </div>
 
                 <div id="checkbox-devolução">
-                    <label><input type="checkbox" id="mostrar" name="devolução_diferente">Devolução em Local Diferente</label>
+                    <label><input type="checkbox" id="checkbox-devolucao" name="devolução_diferente">Devolução em Local Diferente</label>
+                </div>
+
+                <div id="checkbox-tarifa">
+                    <label><input type="checkbox" id="checkbox-tarifa" name="tarifa">Tarifa Empresarial</label>
                 </div>
 
                 <button type="submit" id="btn-search">Pesquisar 🔍</button>
             </form>
     </section>
 
+    <section class="Resultado-pesquisa"></section> <!-- Container para resultados Java -->
 
 <!-- Secção da frota -->
 <div id="frota">
@@ -116,8 +122,8 @@
     <div class="slideshow-viewport">
       <!-- Linha que se move para a esquerda/direita -->
       <div class="slideshow-track">
-        <!-- Cada .slide é um cartão de carro -->
-        <div class="slide">
+
+        <div class="slide"> <!--------------------------------------------------------- Slide 1 -->
             <div class="car-card">
                 <img src="img/Cars/Mercedes.c300d.png" alt="Mercedes C 300 d">
                 <h3 class="car-name">MERCEDES C 300 d</h3>
@@ -132,7 +138,8 @@
             </button>
             </div>
         </div>
-        <div class="slide">
+
+        <div class="slide"> <!--------------------------------------------------------- Slide 2 -->
             <div class="car-card">
                 <img src="img/Cars/C_Renault_Clio.png" alt="Renault Clio">
                 <h3 class="car-name">Renault Clio IV</h3>
@@ -146,7 +153,8 @@
                 </button>
             </div>
         </div>
-        <div class="slide">
+
+        <div class="slide"> <!--------------------------------------------------------- Slide 3 -->
           <div class="car-card">
                 <img src="img/Cars/NissanNavara.png" alt="Renault Clio">
                 <h3 class="car-name">Nissan 4x4 King</h3>
@@ -160,7 +168,8 @@
                 </button>
             </div>
         </div>
-        <div class="slide">
+
+        <div class="slide"> <!--------------------------------------------------------- Slide 4 -->
           <div class="car-card">
                 <img src="img/Cars/Ford_Ranger.png" alt="Ford Ranger">
                 <h3 class="car-name">Ford Ranger</h3>
@@ -174,7 +183,8 @@
                 </button>
             </div>
         </div>
-        <div class="slide">
+
+        <div class="slide"> <!--------------------------------------------------------- Slide 5 -->
           <div class="car-card">
                 <img src="img/Cars/N_NissanQashqai.png" alt="Nissan Qashqai">
                 <h3 class="car-name">Nissan Qashqai</h3>
@@ -188,7 +198,8 @@
                 </button>
             </div>
         </div>
-        <div class="slide">
+
+        <div class="slide"> <!--------------------------------------------------------- Slide 6 -->
           <div class="car-card">
                 <img src="img/Cars/D-ford.focus.png" alt="Ford Focus">
                 <h3 class="car-name">Ford Focus 1.0</h3>
@@ -202,7 +213,8 @@
                 </button>
             </div>
         </div>
-        <div class="slide">
+
+        <div class="slide"> <!--------------------------------------------------------- Slide 7 -->
           <div class="car-card">
                 <img src="img/Cars/Hyundai_I10.png" alt="Hyundai I10">
                 <h3 class="car-name">Hyundai I10</h3>
@@ -216,7 +228,8 @@
                 </button>
             </div>
         </div>
-        <div class="slide">
+
+        <div class="slide"> <!--------------------------------------------------------- Slide 8 -->
           <div class="car-card">
                 <img src="img/Cars/Mazda_MX5.jpg" alt="Mazda MX5">
                 <h3 class="car-name">Mazda MX5 1.5</h3>
@@ -230,6 +243,67 @@
                 </button>
             </div>
         </div>
+
+        <div class="slide"> <!--------------------------------------------------------- Slide 9 carrinha -->
+          <div class="car-card">
+                <img src="img/Cars/Renault_Traficmb.jpg" alt="Renault Trafic">
+                <h3 class="car-name">RENAULT TRAFIC CB L1H1P1</h3>
+                <p class="car-subtitle"></p>
+
+                <div class="car-icons">
+                    
+                </div>
+                <button class="btn-reservar" type="button">
+                    RESERVAR
+                </button>
+            </div>
+        </div>
+
+        <div class="slide"> <!--------------------------------------------------------- Slide 10 Carrinha -->
+          <div class="car-card">
+                <img src="img/Cars/FordTransitBaixa.png" alt="Ford Transit Cargo">
+                <h3 class="car-name">FORD TRANSIT CARGO</h3>
+                <p class="car-subtitle">Furgon - Tecto Normal</p>
+
+                <div class="car-icons">
+                    
+                </div>
+                <button class="btn-reservar" type="button">
+                    RESERVAR
+                </button>
+            </div>
+        </div>
+
+        <div class="slide"> <!--------------------------------------------------------- Slide 11 Carrinha -->
+          <div class="car-card">
+                <img src="img/Cars/FordTransitAlta.png" alt="Mazda MX5">
+                <h3 class="car-name">FORD TRANSIT CARGO</h3>
+                <p class="car-subtitle">Furgon - Tecto-Semi Elevador</p>
+
+                <div class="car-icons">
+                    
+                </div>
+                <button class="btn-reservar" type="button">
+                    RESERVAR
+                </button>
+            </div>
+        </div>
+
+        <div class="slide"> <!--------------------------------------------------------- Slide 12 carrinha -->
+          <div class="car-card">
+                <img src="img/Cars/Renault_Kangoo.jpg" alt="Mazda MX5">
+                <h3 class="car-name">RENAULT KANGOO</h3>
+                <p class="car-subtitle">Pequeno Furgon</p>
+
+                <div class="car-icons">
+                    
+                </div>
+                <button class="btn-reservar" type="button">
+                    RESERVAR
+                </button>
+            </div>
+        </div>
+        
       </div>
     </div>
   </div>

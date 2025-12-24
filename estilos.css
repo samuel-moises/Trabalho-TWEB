@@ -200,9 +200,14 @@ body {
     font-size: 0.9rem;
     text-align: right;
   }
+  .hero .search-box #checkbox-tarifa {
+    grid-column: 1/2;
+    grid-row: 7;
+  }
   .hero .search-box #btn-search {
     justify-self: center;
     grid-column: 1/-1;
+    grid-row: 7;
     width: 35%;
     padding: 10px;
     background: #8bc53f;
@@ -215,7 +220,8 @@ body {
     background: rgb(102.976744186, 141.8790697674, 22.1209302326);
   }
   .hero .search-box #checkbox-veiculo,
-  .hero .search-box #checkbox-devolução {
+  .hero .search-box #checkbox-devolução,
+  .hero .search-box #checkbox-tarifa {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -224,7 +230,8 @@ body {
     gap: 1rem; /* Espaço entre opções */
   }
   .hero .search-box #checkbox-veiculo label,
-  .hero .search-box #checkbox-devolução label {
+  .hero .search-box #checkbox-devolução label,
+  .hero .search-box #checkbox-tarifa label {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
@@ -232,7 +239,8 @@ body {
     cursor: pointer;
   }
   .hero .search-box #checkbox-veiculo input[type=checkbox],
-  .hero .search-box #checkbox-devolução input[type=checkbox] {
+  .hero .search-box #checkbox-devolução input[type=checkbox],
+  .hero .search-box #checkbox-tarifa input[type=checkbox] {
     transform: scale(1);
     margin: 0;
   }
@@ -308,7 +316,8 @@ body {
     text-align: right;
   }
   .hero .search-box #checkbox-veiculo,
-  .hero .search-box #checkbox-devolução {
+  .hero .search-box #checkbox-devolução,
+  .hero .search-box #checkbox-tarifa {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -317,7 +326,8 @@ body {
     gap: 1rem; /* Espaço entre opções */
   }
   .hero .search-box #checkbox-veiculo label,
-  .hero .search-box #checkbox-devolução label {
+  .hero .search-box #checkbox-devolução label,
+  .hero .search-box #checkbox-tarifa label {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
@@ -325,9 +335,14 @@ body {
     cursor: pointer;
   }
   .hero .search-box #checkbox-veiculo input[type=checkbox],
-  .hero .search-box #checkbox-devolução input[type=checkbox] {
+  .hero .search-box #checkbox-devolução input[type=checkbox],
+  .hero .search-box #checkbox-tarifa input[type=checkbox] {
     transform: scale(1);
     margin: 0;
+  }
+  .hero .search-box #checkbox-tarifa {
+    grid-column: 1/2;
+    grid-row: 6;
   }
   .hero .search-box #btn-search {
     justify-self: center;
@@ -363,7 +378,7 @@ body {
     display: grid;
     align-items: center;
     width: 100%;
-    grid-template-rows: repeat(11, auto);
+    grid-template-rows: repeat(13, auto);
     grid-template-columns: 1fr;
     row-gap: 1rem;
     background: #f2f2f2;
@@ -392,7 +407,8 @@ body {
     text-align: left;
   }
   .search-box #checkbox-veiculo,
-  .search-box #checkbox-devolução {
+  .search-box #checkbox-devolução,
+  .search-box #checkbox-tarifa {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -401,7 +417,8 @@ body {
     gap: 1rem; /* Espaço entre opções */
   }
   .search-box #checkbox-veiculo label,
-  .search-box #checkbox-devolução label {
+  .search-box #checkbox-devolução label,
+  .search-box #checkbox-tarifa label {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
@@ -409,7 +426,8 @@ body {
     cursor: pointer;
   }
   .search-box #checkbox-veiculo input[type=checkbox],
-  .search-box #checkbox-devolução input[type=checkbox] {
+  .search-box #checkbox-devolução input[type=checkbox],
+  .search-box #checkbox-tarifa input[type=checkbox] {
     transform: scale(1);
     margin: 0;
   }
@@ -855,4 +873,54 @@ body {
     padding: 15px;
     display: block;
   }
+}
+.resultado-veiculos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  padding: 10px;
+}
+.resultado-veiculos .car-card {
+  width: 250px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.resultado-veiculos .car-card img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.resultado-veiculos .car-card h1 {
+  font-size: 18px;
+  margin: 8px 0;
+  line-height: 1.2;
+}
+.resultado-veiculos .car-card p {
+  margin: 4px 0;
+  line-height: 1.2;
+  font-size: 14px;
+}
+.resultado-veiculos .car-card .btn-reservar {
+  padding: 10px;
+  background: #8bc53f;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+.resultado-veiculos .car-card .btn-reservar:hover {
+  background: rgb(112.024, 160.512, 48.488);
 }/*# sourceMappingURL=estilos.css.map */

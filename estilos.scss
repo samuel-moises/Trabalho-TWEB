@@ -3,7 +3,6 @@ $verde1: #87ba1d;     // Cor texto
 $verde: #8bc53f;
 $cinza-texto: #333;
 $cinza-escuro: #222;
-
 $cinza-claro: #f2f2f2;
 $white: #fff;
 
@@ -22,9 +21,9 @@ $white: #fff;
 }
 
 
-body {
-    font-size: 62.5%;// (62.5% == 10px) Default font size 16px, 100%, 1.0000em
-}
+//body {
+    //font-size: 62.5%;// (62.5% == 10px) Default font size 16px, 100%, 1.0000em
+//}
 
 //* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
 //* * * * * * * * * * * * * * * * * * * * * * * * * * HEADER * * * * * * * * * * * * * * * * * * * * * * * * * *//
@@ -97,13 +96,9 @@ body {
 }
 
 
-
-
 //* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
 //* * * * * * * * * * * * * * * * * * * * * * * * * * NAVBAR * * * * * * * * * * * * * * * * * * * * * * * * * *//
 //* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
-
-
     .menu {
         @include menu-format();
         padding: 0;
@@ -157,7 +152,6 @@ body {
                     
                     &.drop-1 a {
                         background: $cinza-claro;
-                        //padding: 1rem;
                         color: $cinza-texto;
                         &:hover {
                             color:$verde;
@@ -174,7 +168,6 @@ body {
         }
     }
 
-
 @media (min-width: 900px) { //Ocultar o pt só é necessário no sandwich menu
     .lang-pequeno {
         display: none !important; 
@@ -190,7 +183,6 @@ body {
         
         .lang-pequeno {
             display: block;
-            //border: 2px solid blue;
             font-size: 1.2rem;
             text-align: center;
             margin: 0;
@@ -209,7 +201,6 @@ body {
             height: 5rem;
         } 
 }
-
 
 //* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
 //* * * * * * * * * * * * * * * * * * * * * * * * * FORMULÀRIO * * * * * * * * * * * * * * * * * * * * * * * * *//
@@ -237,6 +228,11 @@ body {
             margin: 0; // Remove margens extras
         }
 }
+
+
+
+
+
 
 
 @media (min-width: 1100px) {
@@ -546,17 +542,15 @@ body {
     
 /* Área geral da secção */
 #frota {
-  position: relative;          /* permite posicionar as setas em absoluto */
+  position: relative;// Permite posicionar as setas em absoluto
   margin: 0 8vw;
   padding: 5vw;
-  //border: solid 2px red;
 
     /* Centraliza conteúdos internos */
     .container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        //border: solid 2px red;
     }
 
     /* Título */
@@ -571,24 +565,24 @@ body {
 
 
 /* “Janela” do slideshow: mostra só uma parte da track */
-.slideshow-viewport {
+.slideshow-viewport { 
     width: 100%;
-    overflow: hidden;            /* esconde cartões que saem para os lados */
+    overflow: hidden; // Esconde cartões que saem para os lados
 }
 
 /* Linha de slides que vai ser deslocada com translateX */
 .slideshow-track {
-    display: flex;               /* coloca todos os .slide numa linha */
-    transition: transform 0.5s ease; /* animação suave da deslocação */
+    display: flex; // Coloca todos os .slide numa linha
+    transition: transform 0.5s ease; // Animação suave da deslocação
 }
 
 /* Cada cartão de carro */
 .slide {
-    flex: 0 0 25%;               /* 4 cartões visíveis (4 × 25% = 100%) */
+    flex: 0 0 25%;// 4 slides (4 × 25%)
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;               /* espaço entre cartões */
+    padding: 10px;// Espaçamento entre cartões
     box-sizing: border-box;
 
     /* Imagem do carro */
@@ -649,50 +643,50 @@ body {
     padding: 10px;
 }
 
-    .car-card { // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * Formatação cartões tanto para Java como para a frota
-        display: flex;
-        flex-direction: column;
-        width: 250px;
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        padding: 16px;
-        text-align: center;
-        gap: 8px;
+.car-card { // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * Formatação cartões tanto para Java como para a frota
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 16px;
+    text-align: center;
+    gap: 8px;
 
 
-        img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    h1 {
+        font-size: 18px;
+        margin: 8px 0;
+        line-height: 1.2;
+    }
+
+    p {
+        margin: 4px 0;
+        line-height: 1.2;
+        font-size: 14px;
+    }
+
+    .btn-reservar {
+        padding: 10px;
+        background: #8bc53f;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 4px;
+
+        &:hover {
+            background: darken(#8bc53f, 10%);
         }
-
-        h1 {
-            font-size: 18px;
-            margin: 8px 0;
-            line-height: 1.2;
-        }
-
-        p {
-            margin: 4px 0;
-            line-height: 1.2;
-            font-size: 14px;
-        }
-
-        .btn-reservar {
-            padding: 10px;
-            background: #8bc53f;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            border-radius: 4px;
-
-            &:hover {
-                background: darken(#8bc53f, 10%);
-            }
-        }
-    } 
+    }
+} 
 
 
 
@@ -822,7 +816,14 @@ body {
 //* * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
 //* * * * * * * * * * * * * * * * * * * * * * * * * * FOOTER * * * * * * * * * * * * * * * * * * * * * * * * * *//
 //* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
-
+@mixin menu-format { //Formatação dos menus do footer
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    gap: 0.8rem;
+}
     .footer {
         display: flex;
         flex-direction: column;

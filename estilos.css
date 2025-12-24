@@ -1,8 +1,4 @@
 @charset "UTF-8";
-body {
-  font-size: 62.5%;
-}
-
 .header {
   background: white;
   font-family: "Roboto", sans-serif;
@@ -461,7 +457,7 @@ body {
 }
 /* Área geral da secção */
 #frota {
-  position: relative; /* permite posicionar as setas em absoluto */
+  position: relative;
   margin: 0 8vw;
   padding: 5vw;
   /* Centraliza conteúdos internos */
@@ -483,22 +479,22 @@ body {
 /* “Janela” do slideshow: mostra só uma parte da track */
 .slideshow-viewport {
   width: 100%;
-  overflow: hidden; /* esconde cartões que saem para os lados */
+  overflow: hidden;
 }
 
 /* Linha de slides que vai ser deslocada com translateX */
 .slideshow-track {
-  display: flex; /* coloca todos os .slide numa linha */
-  transition: transform 0.5s ease; /* animação suave da deslocação */
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
 /* Cada cartão de carro */
 .slide {
-  flex: 0 0 25%; /* 4 cartões visíveis (4 × 25% = 100%) */
+  flex: 0 0 25%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px; /* espaço entre cartões */
+  padding: 10px;
   box-sizing: border-box;
   /* Imagem do carro */
 }

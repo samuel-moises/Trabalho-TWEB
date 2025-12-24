@@ -87,12 +87,14 @@
                     <option value="Faro">Faro</option>
                 </select>
 
-                <input type="date" id="data-levantamento" required>
+                <!--onfocus="this.type='date'"  -> Quando o utilizador clica muda o tipo de input para date -->
+                <!--onblur="if(!this.value)this.type='text'"  -> Quando o utilizador sai do campo se não tiver data selecionada colta a ser tipo text-->
+                <input type="text" id="data-levantamento" placeholder="Data Levantamento" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'" required>
                 <input type="time" id="hora-levantamento" value="10:00" required>
-                <input type="date" id="data-devolucao" required> 
+                <input type="text" id="data-devolucao" placeholder="Data Devolução" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'" required>
                 <input type="time" id="hora-devolução" value="10:00" required>
                 <span>Data de nascimento do condutor:</span>
-                <input type="date" id="data-nascimento" placeholder="AAAA-MM-DD">
+                <input type="date" id="data-nascimento" placeholder="">
      
                 <div id="check-veiculo">
                     <label><input type="checkbox" id="checkbox-carro">Carro</label>

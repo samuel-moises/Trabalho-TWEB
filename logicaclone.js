@@ -233,28 +233,34 @@ return total.toFixed(2);// Retorna o total com 2 casas decimais
     veiculo => { ... } -->é uma função arrow que recebe cada veículo (v) e executa o código dentro das chaves {}.
 */
 
-
-veiculosSelecionados.forEach(veiculo => { // Veiculos selecionados é o array retornado pela função escolherAleatórios
-    const dias = calcularDias(dataLev, dataDev);
+  veiculosSelecionados.forEach(veiculo => { // Veiculos selecionados é o array retornado pela função escolherAleatórios
+    
+    const levantamento = document.getElementById("levantamento").value;
+    const devolucao = document.getElementById("devolução").value; 
+    const card = document.createElement("div"); // Cria um container (card)para cada veículo
     const tipoVeiculo = carroSelecionado ? "Carro" : "Carrinha";
-    const total = calcularPreco(dias, tipoVeiculo, devolucaoCheckbox, tarifaEmpresarial);
+    const dias = calcularDias(dataLev, dataDev);
+    const total = calcularPreco(dias, tipoVeiculo, devolucaoCheckbox, tarifaEmpresarial)
 
-    // Captura o template
-    const template = document.getElementById("card-template");
-    const card = template.content.cloneNode(true); // Clona o conteúdo do template
+    
 
-    // Preenche os dados no clone
-    card.querySelector(".car-img").src = veiculo.img;
-    card.querySelector(".car-img").alt = veiculo.nome;
-    card.querySelector(".car-nome").textContent = veiculo.nome;
-    card.querySelector(".car-grupo").textContent = veiculo.grupo;
-    card.querySelector(".car-levantamento").textContent = levantamento;
-    card.querySelector(".car-devolucao").textContent = devolucao;
-    card.querySelector(".car-preco").textContent = total;
 
-    // Adiciona ao container
-    resultadoDiv.appendChild(card);
-})
+    card.classList.add("car-card"); // Adiciona a classe CSS car-card ao card
+    card.style.border = "1px solid #ccc";
+    card.style.padding = "10px";
+    card.style.textAlign = "center";
+    card.style.background = "#fff";
+    card.innerHTML = `
+      <img src="${veiculo.img}" alt="${veiculo.nome}">
+      <h1>${veiculo.nome}</h1>
+      <p>${veiculo.grupo}</p>
+      <p><strong>Levantamento:</strong> ${levantamento}</p>
+      <p><strong>Devolução:</strong> ${devolucao}</p>
+      <p><strong>Preço Total:</strong> €${total}</p>
+      <button class="btn-reservar">Reservar</button>
+    `;
+    resultadoDiv.appendChild(card); // Adiciona o card ao container de resultados
+  });
 
   // Adiciona abaixo do formulário numa DIV criada para o efeito
   document.querySelector(".Resultado-pesquisa").appendChild(resultadoDiv);

@@ -200,7 +200,7 @@ body {
     font-size: 0.9rem;
     text-align: right;
   }
-  .hero .search-box #checkbox-tarifa {
+  .hero .search-box #tarifa {
     grid-column: 1/2;
     grid-row: 7;
   }
@@ -219,9 +219,9 @@ body {
   .hero .search-box #btn-search:hover {
     background: rgb(102.976744186, 141.8790697674, 22.1209302326);
   }
-  .hero .search-box #checkbox-veiculo,
-  .hero .search-box #checkbox-devolução,
-  .hero .search-box #checkbox-tarifa {
+  .hero .search-box #check-veiculo,
+  .hero .search-box #check-devolucao,
+  .hero .search-box #tarifa {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -229,18 +229,18 @@ body {
     padding: 7px;
     gap: 1rem; /* Espaço entre opções */
   }
-  .hero .search-box #checkbox-veiculo label,
-  .hero .search-box #checkbox-devolução label,
-  .hero .search-box #checkbox-tarifa label {
+  .hero .search-box #check-veiculo label,
+  .hero .search-box #check-devolucao label,
+  .hero .search-box #tarifa label {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
     white-space: nowrap;
     cursor: pointer;
   }
-  .hero .search-box #checkbox-veiculo input[type=checkbox],
-  .hero .search-box #checkbox-devolução input[type=checkbox],
-  .hero .search-box #checkbox-tarifa input[type=checkbox] {
+  .hero .search-box #check-veiculo input[type=checkbox],
+  .hero .search-box #check-devolucao input[type=checkbox],
+  .hero .search-box #tarifa input[type=checkbox] {
     transform: scale(1);
     margin: 0;
   }
@@ -315,9 +315,9 @@ body {
     font-size: 0.9rem;
     text-align: right;
   }
-  .hero .search-box #checkbox-veiculo,
-  .hero .search-box #checkbox-devolução,
-  .hero .search-box #checkbox-tarifa {
+  .hero .search-box #check-veiculo,
+  .hero .search-box #check-devolucao,
+  .hero .search-box #tarifa {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -325,22 +325,22 @@ body {
     padding: 7px;
     gap: 1rem; /* Espaço entre opções */
   }
-  .hero .search-box #checkbox-veiculo label,
-  .hero .search-box #checkbox-devolução label,
-  .hero .search-box #checkbox-tarifa label {
+  .hero .search-box #check-veiculo label,
+  .hero .search-box #check-devolucao label,
+  .hero .search-box #tarifa label {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
     white-space: nowrap;
     cursor: pointer;
   }
-  .hero .search-box #checkbox-veiculo input[type=checkbox],
-  .hero .search-box #checkbox-devolução input[type=checkbox],
-  .hero .search-box #checkbox-tarifa input[type=checkbox] {
+  .hero .search-box #check-veiculo input[type=checkbox],
+  .hero .search-box #check-devolucao input[type=checkbox],
+  .hero .search-box #tarifa input[type=checkbox] {
     transform: scale(1);
     margin: 0;
   }
-  .hero .search-box #checkbox-tarifa {
+  .hero .search-box #tarifa {
     grid-column: 1/2;
     grid-row: 6;
   }
@@ -406,9 +406,9 @@ body {
     font-size: 0.9rem;
     text-align: left;
   }
-  .search-box #checkbox-veiculo,
-  .search-box #checkbox-devolução,
-  .search-box #checkbox-tarifa {
+  .search-box #check-veiculo,
+  .search-box #check-devolucao,
+  .search-box #tarifa {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -416,18 +416,18 @@ body {
     padding: 7px;
     gap: 1rem; /* Espaço entre opções */
   }
-  .search-box #checkbox-veiculo label,
-  .search-box #checkbox-devolução label,
-  .search-box #checkbox-tarifa label {
+  .search-box #check-veiculo label,
+  .search-box #check-devolucao label,
+  .search-box #tarifa label {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
     white-space: nowrap;
     cursor: pointer;
   }
-  .search-box #checkbox-veiculo input[type=checkbox],
-  .search-box #checkbox-devolução input[type=checkbox],
-  .search-box #checkbox-tarifa input[type=checkbox] {
+  .search-box #check-veiculo input[type=checkbox],
+  .search-box #check-devolucao input[type=checkbox],
+  .search-box #tarifa input[type=checkbox] {
     transform: scale(1);
     margin: 0;
   }
@@ -445,14 +445,14 @@ body {
   .search-box #btn-search:hover {
     background: rgb(102.976744186, 141.8790697674, 22.1209302326);
   }
-  .search-box #checkbox-veiculo {
+  .search-box #check-veiculo {
     display: flex;
     gap: 1rem; /* Espaço entre opções */
     align-items: center;
     font-size: 0.8rem;
     padding: 7px;
   }
-  .search-box #checkbox-veiculo label {
+  .search-box #check-veiculo label {
     display: flex;
     align-items: center;
     gap: 0; /* Espaço entre checkbox e texto */

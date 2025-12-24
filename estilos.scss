@@ -302,7 +302,7 @@ body {
                     
             }
 
-            #checkbox-tarifa { 
+            #tarifa { 
                 grid-column: 1 / 2;
                 grid-row: 7;
             }
@@ -323,9 +323,9 @@ body {
                 }
             }
          
-            #checkbox-veiculo, 
-            #checkbox-devolução,
-            #checkbox-tarifa {
+            #check-veiculo, 
+            #check-devolucao,
+            #tarifa {
                 @include checkbox-format()
             }  
         }
@@ -417,13 +417,13 @@ body {
                         
         }
 
-        #checkbox-veiculo, 
-        #checkbox-devolução,
-        #checkbox-tarifa {
+        #check-veiculo, 
+        #check-devolucao,
+        #tarifa {
             @include checkbox-format()
         } 
 
-        #checkbox-tarifa { 
+        #tarifa { 
             grid-column: 1 / 2;
             grid-row: 6;
         }
@@ -499,9 +499,9 @@ body {
                         
         }
 
-        #checkbox-veiculo, 
-        #checkbox-devolução,
-        #checkbox-tarifa {
+        #check-veiculo, 
+        #check-devolucao,
+        #tarifa {
             @include checkbox-format()
         }
 
@@ -521,7 +521,7 @@ body {
             }
         }
 
-        #checkbox-veiculo {
+        #check-veiculo {
             display: flex;
             gap: 1rem; /* Espaço entre opções */
             align-items: center;
@@ -1027,7 +1027,7 @@ body {
     }
 }
 
-// * * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+// * * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * *  * * * * Formatação cartões quando faz pesquisa JAVA
 
 .resultado-veiculos {
     display: flex;
@@ -1084,5 +1084,6 @@ body {
         }
     }   
 }
+
 
 

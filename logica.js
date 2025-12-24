@@ -1,34 +1,20 @@
-// Número de slides que queremos mostrar ao mesmo tempo em desktop
-const slidesPerView = 4;
 
-// Índice do primeiro slide atualmente visível (começa no 0)
-let startIndex = 0;
 
-// Seleciona a "track" que se vai mover
-const track = document.querySelector('#frota .slideshow-track');
-
-// Seleciona todos os cartões de carro (.slide)
-const slides = document.querySelectorAll('#frota .slide');
-
-// Botões de navegação
-const prevButton = document.querySelector('#frota .prev');
-const nextButton = document.querySelector('#frota .next');
-
-// Calcula o número máximo de posições de início
-// Ex.: se tiveres 6 slides e mostras 4, máximo é 2 (0, 1, 2)
-const maxStartIndex = Math.max(0, slides.length - slidesPerView);
+const slidesPerView = 4; // Número de slides visíveis ao mesmo tempo
+let startIndex = 0; // Índice do primeiro slide atualmente visível (começa no 0)
+const track = document.querySelector('#frota .slideshow-track'); // Seleciona a "track" que se vai mover
+const slides = document.querySelectorAll('#frota .slide'); // Seleciona todos os cartões de carro (.slide)
+const prevButton = document.querySelector('#frota .prev'); // Botões de navegação Prev
+const nextButton = document.querySelector('#frota .next'); // Botões de navegação Next
+const maxStartIndex = Math.max(0, slides.length - slidesPerView); // Calcula o número máximo de posições de início e nã deixa ser negativo
 
 // Função que aplica o translateX em função do startIndex
 function updatePosition() {
-  // Cada slide ocupa (100 / slidesPerView)% da largura da viewport
-  const slideWidthPercent = 100 / slidesPerView;
-
-  // Offset negativo para deslizar para a esquerda
-  const offset = -startIndex * slideWidthPercent;
-
-  // Move a track inteira
-  track.style.transform = `translateX(${offset}%)`;
+  const slideWidthPercent = 100 / slidesPerView; // Cada slide ocupa (100 / slidesPerView)% da largura da viewport
+  const offset = -startIndex * slideWidthPercent; // Offset negativo para deslizar para a esquerda
+  track.style.transform = `translateX(${offset}%)`; //converte o offset numa string de transformação CSS e aplica à track -->${} Permite interpolar variáveis diretamente dentro da string
 }
+  
 
 // Avança ou recua o carrossel em blocos de 4 imagens
 function moveSlides(direction) {
@@ -45,8 +31,7 @@ function moveSlides(direction) {
     startIndex = maxStartIndex;
   }
 
-  // Atualiza a posição visual
-  updatePosition();
+  updatePosition(); // Chama a função para atualizar a posição
 }
 
 // Liga o clique da seta esquerda à função moveSlides(-1)

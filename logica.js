@@ -244,3 +244,5 @@ veiculosSelecionados.forEach(veiculo => { // Veiculos selecionados é o array re
   // Adiciona abaixo do formulário numa DIV criada para o efeito
   document.querySelector(".Resultado-pesquisa").appendChild(resultadoDiv);
 });
+
+//fim do ficheiro logica.js
